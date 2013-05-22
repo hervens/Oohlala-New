@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:background="@drawable/bg_redeem_item"
+    android:id="@+id/activityRoot" >
+    
+    <RelativeLayout
+		        xmlns:android="http://schemas.android.com/apk/res/android"
+		        android:layout_width="fill_parent"
+		        android:layout_height="50dp"
+		        android:orientation="horizontal"
+		        android:background="@drawable/header_slice"
+		        android:id="@+id/rlHeader"
+		        android:paddingTop="5dp"
+		        android:paddingLeft="5dp"
+		        android:paddingRight="5dp"
+		        android:paddingBottom="5dp" >
+		       
+				<TextView  
+				    android:id="@+id/header"
+					android:layout_width="200dp" 
+					android:layout_height="35dp"
+					android:text="@string/GETTING_STARTED"
+					android:textColor="@color/white1"
+					android:textSize="16dp"
+					android:maxLines="1"
+					android:layout_centerInParent="true"
+					android:gravity="center"
+					android:shadowRadius="1"
+  					android:shadowDx="0"
+  					android:shadowDy="-2"
+  					android:shadowColor="@color/shadow_color" />
+				
+				<TextView
+			        android:layout_width="54dp"
+			        android:layout_height="38dp"
+			        android:id="@+id/bStart"
+			        android:text="@string/Done"
+		 			android:textSize="13dp"
+		 			android:textColor="@color/dimgrey3"
+					android:gravity="center"
+			        android:layout_marginTop="0dp"
+			        android:layout_alignParentRight="true"
+			        android:background="@drawable/compose_share_button_bg"
+			        android:visibility="gone" />
+
+			</RelativeLayout>
+
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"  
+	    android:layout_width="fill_parent"  
+	    android:layout_height="fill_parent"  
+	    android:orientation="vertical"
+	    android:id="@+id/flPage"
+	    android:layout_below="@+id/rlHeader" >
+    
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_gravity="center"
+        android:fitsSystemWindows="true" />
+
+    	<RelativeLayout
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:orientation="vertical"
+	        android:layout_gravity="center" >
+
+        <LinearLayout
+            android:id="@+id/viewGroup"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:background="@drawable/header_slice" >
+        </LinearLayout>
+    	</RelativeLayout>
+	</FrameLayout>
+
+</RelativeLayout>

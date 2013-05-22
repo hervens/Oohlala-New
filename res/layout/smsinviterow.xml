@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/listview_row_bg_state"
+    android:id="@+id/bg" >
+
+    <TextView
+        android:id="@+id/tvLetter"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+	  	android:text=""
+	 	android:textSize="13dp"
+	  	android:paddingTop="5dp"
+	  	android:paddingBottom="5dp"
+	  	android:paddingLeft="10dp"
+	  	android:background="@color/brown1"
+	  	android:textColor="@color/black" />
+    
+    <TextView
+        android:id="@+id/tvName"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:text="James"
+        android:textSize="18dp"
+        android:textColor="@color/black"
+        android:gravity="center_vertical"
+        android:layout_marginRight="80dp"
+        android:layout_marginLeft="10dp"
+        android:maxLines="1"
+        android:layout_below="@+id/tvLetter" />
+    
+    <ImageView
+        android:id="@+id/ivCheck"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="15dp"
+        android:adjustViewBounds="true" 
+        android:scaleType="centerCrop"
+        android:src="@drawable/icon_verified"
+        android:layout_below="@+id/tvLetter"
+        android:visibility="gone" />
+    
+    <ImageView
+        android:id="@+id/ivInvite"
+        android:layout_width="25dp"
+        android:layout_height="15dp"
+        android:layout_marginRight="70dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="18dp"
+        android:adjustViewBounds="true" 
+        android:scaleType="centerCrop"
+        android:src="@drawable/add_friend_icon"
+        android:layout_below="@+id/tvLetter"
+        android:visibility="gone" />
+    
+    <TextView
+        android:id="@+id/tvInvite"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:text="@string/Invite"
+        android:textSize="13dp"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="20dp"
+        android:layout_below="@+id/tvLetter" />
+    
+</RelativeLayout>

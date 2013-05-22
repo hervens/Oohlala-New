@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:background="@color/white1" >
+    
+	<RelativeLayout
+		        xmlns:android="http://schemas.android.com/apk/res/android"
+		        android:layout_width="fill_parent"
+		        android:layout_height="50dp"
+		        android:orientation="horizontal"
+		        android:background="@drawable/header_slice"
+		        android:id="@+id/rlHeader"
+		        android:paddingTop="5dp"
+		        android:paddingLeft="5dp"
+		        android:paddingRight="5dp"
+		        android:paddingBottom="5dp" >
+		       
+				<TextView  
+				    android:id="@+id/header"
+					android:layout_width="200dp" 
+					android:layout_height="35dp"
+					android:text="@string/Comments"
+					android:textColor="@color/white1"
+					android:textSize="16dp"
+					android:maxLines="1"
+					android:layout_centerInParent="true"
+					android:gravity="center"
+					android:shadowRadius="1"
+  					android:shadowDx="0"
+  					android:shadowDy="-2"
+  					android:shadowColor="@color/shadow_color" />
+				
+				<Button
+			        android:layout_width="54dp"
+			        android:layout_height="35dp"
+			        android:background="@drawable/button_back"
+			        android:id="@+id/back"
+			        android:layout_marginTop="2dp"
+			        android:layout_alignParentLeft="true" />
+
+			</RelativeLayout>		
+			
+		    <com.handmark.pulltorefresh.library.PullToRefreshListView 
+		        android:layout_below="@+id/rlHeader"
+		        android:layout_above="@+id/llLoading"
+	    		android:layout_width="fill_parent"
+	   			android:layout_height="fill_parent"
+	    		android:orientation="vertical"
+	    		android:id="@+id/llScrollViewCampusWallComment"
+				android:fadingEdge="none"
+				android:scrollbarThumbVertical="@drawable/scrollbar_vertical_thumb"
+				android:scrollbars="none" /> 
+				
+		    <LinearLayout
+		        xmlns:android="http://schemas.android.com/apk/res/android"
+		        android:layout_width="fill_parent"
+		        android:layout_height="50dp"
+		        android:gravity="center" 
+		        android:id="@+id/llLoading"
+		        android:layout_above="@+id/bottom"
+		        android:layout_centerHorizontal="true"
+		        android:visibility="gone" >
+		    
+		    <ProgressBar
+		        android:id="@+id/pbLoading"
+		        style="?android:attr/progressBarStyleSmall"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content" />
+		    
+		    </LinearLayout>
+	        
+		    <LinearLayout
+		       	android:id="@+id/bottom"
+		        android:layout_width="fill_parent"
+		        android:layout_height="51dp"
+		        android:orientation="horizontal"
+		        android:gravity="center"
+		        android:background="@drawable/rounded_corner_row_bg3"
+		        android:layout_alignParentBottom="true"
+		        android:padding="5dp" >
+		        
+				<Button android:id="@+id/bPostComment" android:clickable="true"
+					android:background="@drawable/campuswall_button_background"
+					android:layout_width="fill_parent" android:layout_height="40dp"
+					android:text="@string/Post"
+					android:textColor="@color/dimgrey3"
+					android:textSize="16dp"
+					android:layout_weight="1" />
+
+			</LinearLayout>
+			
+		    <RelativeLayout 
+				    android:layout_width="fill_parent"
+				    android:layout_height="fill_parent"
+				    android:orientation="vertical"
+				    android:background="@color/black"
+					android:gravity="center"
+					android:id="@+id/rlBigImage"
+					android:visibility="gone" >
+    
+		    <ImageView
+			        android:id="@+id/ivBigImage"
+			        android:layout_width="fill_parent"
+			        android:layout_height="wrap_content"
+			        android:adjustViewBounds="true" 
+			        android:scaleType="centerCrop"
+			        android:layout_centerInParent="true" />
+
+		    <ProgressBar
+			        android:id="@+id/pbImageLoading"
+			        style="?android:attr/progressBarStyleSmall"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:layout_below="@+id/ivBigImage"
+			        android:layout_centerInParent="true" />
+    
+		    <TextView
+			        android:id="@+id/tvWords"
+			        android:layout_width="fill_parent"
+			        android:layout_height="wrap_content"
+			        android:gravity="center"
+			        android:text=""
+			        android:textColor="@color/white1"
+			        android:layout_alignParentBottom="true"
+			        android:layout_marginBottom="20dp" />
+	    
+			</RelativeLayout>
+	       
+</RelativeLayout>

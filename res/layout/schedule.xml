@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>		
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+    
+    <RelativeLayout
+		        xmlns:android="http://schemas.android.com/apk/res/android"
+		        android:layout_width="fill_parent"
+		        android:layout_height="50dp"
+		        android:orientation="horizontal"
+		        android:background="@drawable/header_slice"
+		        android:id="@+id/rlHeader"
+		        android:paddingTop="5dp"
+		        android:paddingLeft="5dp"
+		        android:paddingRight="5dp"
+		        android:paddingBottom="5dp" >
+		       
+				<TextView  
+				    android:id="@+id/header"
+					android:layout_width="200dp" 
+					android:layout_height="35dp"
+					android:text="@string/SCHEDULE"
+					android:textColor="@color/white1"
+					android:textSize="16dp"
+					android:maxLines="1"
+					android:layout_centerInParent="true"
+					android:gravity="center"
+					android:shadowRadius="1"
+  					android:shadowDx="0"
+  					android:shadowDy="-2"
+  					android:shadowColor="@color/shadow_color" />
+				
+				<Button
+			        android:layout_width="54dp"
+			        android:layout_height="35dp"
+			        android:background="@drawable/button_back"
+			        android:id="@+id/back"
+			        android:layout_marginTop="2dp"
+			        android:layout_alignParentLeft="true" />
+				
+				<Button
+			        android:layout_width="50dp"
+			        android:layout_height="36dp"
+			        android:background="@drawable/button_add"
+			        android:id="@+id/bAdd"
+			        android:layout_marginTop="3dp"
+			        android:layout_alignParentRight="true" />
+
+			</RelativeLayout>
+	
+     <LinearLayout 
+	    android:layout_width="fill_parent"
+	    android:layout_height="60dp"
+	    android:id="@+id/weekday"
+	    android:padding="10dp"
+	    android:gravity="center"
+	    android:background="@drawable/searchbar_bg2"
+	    android:layout_below="@+id/rlHeader" >
+		
+        <Button
+            android:id="@+id/bDay0"
+            android:layout_width="55dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:text="S"
+            android:textColor="@color/white1"
+            android:textSize="15dp"
+            android:background="@drawable/weekday_segmented_button_left" />
+        
+        <Button
+            android:id="@+id/bDay1"
+            android:layout_width="55dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:text="M"
+            android:textColor="@color/white1"
+            android:textSize="15dp"
+            android:background="@drawable/weekday_segmented_button_center"
+            android:layout_toRightOf="@+id/bDay0" />
+        
+        <Button
+            android:id="@+id/bDay2"
+            android:layout_width="55dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:text="T"
+            android:textColor="@color/white1"
+            android:textSize="15dp"
+            android:background="@drawable/weekday_segmented_button_center"
+            android:layout_toRightOf="@+id/bDay1" />
+        
+     	<Button
+            android:id="@+id/bDay3"
+            android:layout_width="55dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:text="W"
+            android:textColor="@color/white1"
+            android:textSize="15dp"
+            android:background="@drawable/weekday_segmented_button_center"
+            android:layout_toRightOf="@+id/bDay2" />
+         
+    	<Button
+            android:id="@+id/bDay4"
+            android:layout_width="55dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:text="T"
+            android:textColor="@color/white1"
+            android:textSize="15dp"
+            android:background="@drawable/weekday_segmented_button_center"
+            android:layout_toRightOf="@+id/bDay3" />
+          
+      	<Button
+            android:id="@+id/bDay5"
+            android:layout_width="55dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:text="F"
+            android:textColor="@color/white1"
+            android:textSize="15dp"
+            android:background="@drawable/weekday_segmented_button_center"
+            android:layout_toRightOf="@+id/bDay4" />
+      	
+      	<Button
+            android:id="@+id/bDay6"
+            android:layout_width="55dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:text="S"
+            android:textColor="@color/white1"
+            android:textSize="15dp"
+            android:background="@drawable/weekday_segmented_button_right"
+            android:layout_toRightOf="@+id/bDay5" />
+        
+        
+   	</LinearLayout>
+
+		    <com.handmark.pulltorefresh.library.PullToRefreshListView
+		        android:id="@+id/lvSchedule"
+		        android:layout_width="fill_parent"
+		        android:layout_height="fill_parent"
+		        android:dividerHeight="0dp"
+				android:fadingEdge="none"
+				android:padding="10dp"
+				android:listSelector="@color/realtransparent"
+				android:scrollbarThumbVertical="@drawable/scrollbar_vertical_thumb"
+				android:layout_below="@+id/weekday"
+				android:scrollbars="none" /> 
+				
+	<RelativeLayout
+	    android:id="@+id/rlEmptySchedule"
+		android:layout_width="fill_parent"
+		android:layout_height="fill_parent"
+		android:layout_below="@+id/weekday"
+		android:visibility="gone" >"
+	    
+	    <ImageView 
+	        android:id="@+id/ivEmptySchedule"
+	        android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:src="@drawable/schedule_empty"
+			android:adjustViewBounds="true" 
+        	android:scaleType="centerCrop"
+        	android:layout_centerHorizontal="true"
+        	android:layout_marginTop="50dp" />
+	    
+	    <TextView  
+			android:id="@+id/tvNoClass"
+			android:layout_width="wrap_content" 
+			android:layout_height="wrap_content"
+			android:text="You have no class on Sunday"
+			android:textColor="@color/grey3"
+			android:textSize="18dp"
+			android:layout_centerHorizontal="true"
+			android:layout_below="@+id/ivEmptySchedule"
+			android:layout_marginTop="20dp" />"
+	    
+	    <TextView  
+			android:id="@+id/tvAddClass"
+			android:layout_width="250dp" 
+			android:layout_height="40dp"
+			android:text="@string/Add_a_Class"
+			android:textColor="@color/white1"
+			android:textSize="16dp"
+			android:gravity="center"
+			android:background="@drawable/button_blue"
+			android:shadowRadius="1"
+  			android:shadowDx="0"
+  			android:shadowDy="-2"
+  			android:shadowColor="@color/shadow_color"
+  			android:layout_centerHorizontal="true"
+  			android:layout_alignParentBottom="true"
+  			android:layout_marginBottom="20dp" />"
+	    
+	</RelativeLayout>
+
+</RelativeLayout>

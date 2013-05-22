@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TabHost xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/thSocial" android:layout_width="fill_parent"
+	android:layout_height="fill_parent">
+	<RelativeLayout
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content" >
+    
+		<RelativeLayout
+		        xmlns:android="http://schemas.android.com/apk/res/android"
+		        android:layout_width="fill_parent"
+		        android:layout_height="50dp"
+		        android:orientation="horizontal"
+		        android:background="@drawable/header_slice"
+		        android:id="@+id/rlHeader"
+		        android:paddingTop="5dp"
+		        android:paddingLeft="5dp"
+		        android:paddingRight="5dp"
+		        android:paddingBottom="5dp" >
+		       
+				<TextView  
+				    android:id="@+id/headerExplore"
+					android:layout_width="200dp" 
+					android:layout_height="35dp"
+					android:text="@string/EXPLORE"
+					android:textColor="@color/white1"
+					android:textSize="16dp"
+					android:layout_centerInParent="true"
+					android:gravity="center"
+					android:shadowRadius="1"
+  					android:shadowDx="0"
+  					android:shadowDy="-2"
+  					android:shadowColor="@color/shadow_color" />
+				
+				<com.gotoohlala.TopMenuNavbar  
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:id="@+id/bTopMenuNavBar"
+			        android:layout_marginTop="2dp"
+			        android:layout_alignParentLeft="true" />
+
+		</RelativeLayout>
+			
+		<FrameLayout android:id="@android:id/tabcontent"
+			android:layout_width="fill_parent"
+			android:layout_height="fill_parent"
+			android:layout_below="@+id/rlHeader" />
+		
+		 <RelativeLayout
+		        android:layout_width="fill_parent"
+		        android:layout_height="fill_parent"
+		        android:paddingLeft="5dp"
+		        android:paddingRight="5dp"
+		        android:gravity="center_horizontal"
+		        android:id="@+id/rlFilter"
+		        android:visibility="gone"
+		        android:background="@color/transparent" >
+		       
+				<TextView  
+				    android:id="@+id/filterHeader"
+					android:layout_width="268dp" 
+					android:layout_height="61dp"
+					android:text="@string/EXPLORE"
+					android:textColor="@color/white1"
+					android:textSize="16dp"
+					android:gravity="center"
+					android:paddingTop="32dp"
+					android:layout_marginTop="-22dp"
+					android:shadowRadius="1"
+  					android:shadowDx="0"
+  					android:shadowDy="-2"
+  					android:shadowColor="@color/shadow_color" />
+
+				<TextView  
+				    android:id="@+id/filterRow1"
+					android:layout_width="268dp" 
+					android:layout_height="35dp"
+					android:text="@string/EXPLORE"
+					android:textColor="@color/white1"
+					android:textSize="16dp"
+					android:gravity="center"
+					android:layout_below="@+id/filterHeader"
+					android:shadowRadius="1"
+  					android:shadowDx="0"
+  					android:shadowDy="-2"
+  					android:shadowColor="@color/shadow_color" />
+				
+				<TextView  
+				    android:id="@+id/filterRow2"
+					android:layout_width="268dp" 
+					android:layout_height="35dp"
+					android:text="@string/CAMPUS_BUILDINGS"
+					android:textColor="@color/white1"
+					android:textSize="16dp"
+					android:gravity="center"
+					android:layout_below="@+id/filterRow1"
+					android:shadowRadius="1"
+  					android:shadowDx="0"
+  					android:shadowDy="-2"
+  					android:shadowColor="@color/shadow_color"
+  					android:visibility="gone" />
+				
+				<TextView  
+				    android:id="@+id/filterRow3"
+					android:layout_width="268dp" 
+					android:layout_height="35dp"
+					android:text="@string/CAMPUS_CLUBS"
+					android:textColor="@color/white1"
+					android:textSize="16dp"
+					android:gravity="center"
+					android:layout_below="@+id/filterRow2"
+					android:shadowRadius="1"
+  					android:shadowDx="0"
+  					android:shadowDy="-2"
+  					android:shadowColor="@color/shadow_color"
+  					android:visibility="gone" />
+				
+				<TextView  
+				    android:id="@+id/filterRow4"
+					android:layout_width="268dp" 
+					android:layout_height="35dp"
+					android:text="@string/DEALS"
+					android:textColor="@color/white1"
+					android:textSize="16dp"
+					android:gravity="center"
+					android:layout_below="@+id/filterRow3"
+					android:shadowRadius="1"
+  					android:shadowDx="0"
+  					android:shadowDy="-2"
+  					android:shadowColor="@color/shadow_color" />
+				
+				<TextView  
+				    android:id="@+id/filterFooter"
+					android:layout_width="268dp" 
+					android:layout_height="70dp"
+					android:text="@string/CANCEL"
+					android:textColor="@color/white1"
+					android:textSize="16dp"
+					android:gravity="center"
+					android:paddingBottom="35dp"
+					android:layout_below="@+id/filterRow4"
+					android:shadowRadius="1"
+  					android:shadowDx="0"
+  					android:shadowDy="-2"
+  					android:shadowColor="@color/shadow_color" />
+			
+			</RelativeLayout>
+
+	<TabWidget android:id="@android:id/tabs"
+		android:layout_weight="0" android:layout_width="fill_parent"
+		android:layout_height="wrap_content" android:visibility="gone" />
+	
+	</RelativeLayout>	
+</TabHost>

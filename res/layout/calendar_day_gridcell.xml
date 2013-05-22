@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical"
+	android:layout_width="32dp"
+	android:layout_height="32dp" >
+
+	<Button
+		android:id="@+id/calendar_day_gridcell"
+		android:layout_gravity="center"
+		android:textColor="@color/white1"
+		android:textSize="14dp"
+		android:background="@drawable/button_calendar_cell"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content">
+	</Button>
+	
+	<ImageView
+		android:id="@+id/ivDot1"
+		android:layout_width="2dp"
+		android:layout_height="2dp"
+		android:layout_alignParentBottom="true"
+		android:layout_marginLeft="1dp"
+		android:layout_marginBottom="4dp" />
+	
+	<ImageView
+		android:id="@+id/ivDot2"
+		android:layout_width="2dp"
+		android:layout_height="2dp"
+		android:layout_alignParentBottom="true"
+		android:layout_toRightOf="@+id/ivDot1"
+		android:layout_marginLeft="1dp"
+		android:layout_marginBottom="4dp" />
+	
+	<ImageView
+		android:id="@+id/ivDot3"
+		android:layout_width="2dp"
+		android:layout_height="2dp"
+		android:layout_alignParentBottom="true"
+		android:layout_toRightOf="@+id/ivDot2"
+		android:layout_marginLeft="1dp"
+		android:layout_marginBottom="4dp" />
+	
+	<ImageView
+		android:id="@+id/ivDot4"
+		android:layout_width="2dp"
+		android:layout_height="2dp"
+		android:layout_alignParentBottom="true"
+		android:layout_toRightOf="@+id/ivDot3"
+		android:layout_marginLeft="1dp"
+		android:layout_marginBottom="4dp" />
+	
+	<ImageView
+		android:id="@+id/ivDot5"
+		android:layout_width="2dp"
+		android:layout_height="2dp"
+		android:layout_alignParentBottom="true"
+		android:layout_toRightOf="@+id/ivDot4"
+		android:layout_marginLeft="1dp"
+		android:layout_marginBottom="4dp" />
+	
+	<ImageView
+		android:id="@+id/ivDot6"
+		android:layout_width="2dp"
+		android:layout_height="2dp"
+		android:layout_alignParentBottom="true"
+		android:layout_toRightOf="@+id/ivDot5"
+		android:layout_marginLeft="1dp"
+		android:layout_marginBottom="4dp" />
+	
+	<ImageView
+		android:id="@+id/ivDot7"
+		android:layout_width="2dp"
+		android:layout_height="2dp"
+		android:layout_alignParentBottom="true"
+		android:layout_toRightOf="@+id/ivDot6"
+		android:layout_marginLeft="1dp"
+		android:layout_marginBottom="4dp" />
+	
+	<ImageView
+		android:id="@+id/ivDot8"
+		android:layout_width="2dp"
+		android:layout_height="2dp"
+		android:layout_alignParentBottom="true"
+		android:layout_toRightOf="@+id/ivDot7"
+		android:layout_marginLeft="1dp"
+		android:layout_marginBottom="4dp" />
+	
+	<ImageView
+		android:id="@+id/ivDot9"
+		android:layout_width="2dp"
+		android:layout_height="2dp"
+		android:layout_alignParentBottom="true"
+		android:layout_toRightOf="@+id/ivDot8"
+		android:layout_marginLeft="1dp"
+		android:layout_marginBottom="4dp" />
+	
+	<ImageView
+		android:id="@+id/ivDot10"
+		android:layout_width="2dp"
+		android:layout_height="2dp"
+		android:layout_alignParentBottom="true"
+		android:layout_toRightOf="@+id/ivDot9"
+		android:layout_marginLeft="1dp"
+		android:layout_marginBottom="4dp" />
+	
+</RelativeLayout>

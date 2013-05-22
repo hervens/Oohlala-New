@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:background="@color/white1" >
+    
+    <com.handmark.pulltorefresh.library.PullToRefreshListView
+        android:id="@+id/lvEventsEvents"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/rlHeader"
+		android:layout_above="@+id/llLoading"
+		android:fadingEdge="none"
+		android:scrollbarThumbVertical="@drawable/scrollbar_vertical_thumb"
+		android:scrollbars="none"
+		android:layout_marginTop="-1dp" />
+    
+    <RelativeLayout
+		        xmlns:android="http://schemas.android.com/apk/res/android"
+		        android:layout_width="fill_parent"
+		        android:layout_height="50dp"
+		        android:orientation="horizontal"
+		        android:background="@drawable/header_slice"
+		        android:id="@+id/rlHeader"
+		        android:paddingTop="5dp"
+		        android:paddingLeft="5dp"
+		        android:paddingRight="5dp"
+		        android:paddingBottom="5dp" >
+		       
+				<TextView  
+				    android:id="@+id/header"
+					android:layout_width="200dp" 
+					android:layout_height="35dp"
+					android:text="@string/EVENTS"
+					android:textColor="@color/white1"
+					android:textSize="16dp"
+					android:layout_centerInParent="true"
+					android:gravity="center"
+					android:shadowRadius="1"
+  					android:shadowDx="0"
+  					android:shadowDy="-2"
+  					android:shadowColor="@color/shadow_color" />
+				
+				<Button
+			        android:layout_width="50dp"
+			        android:layout_height="36dp"
+			        android:background="@drawable/button_add"
+			        android:id="@+id/bAdd"
+			        android:layout_marginTop="3dp"
+			        android:layout_alignParentRight="true"
+			        android:visibility="gone" />
+				
+				<Button
+			        android:layout_width="54dp"
+			        android:layout_height="35dp"
+			        android:background="@drawable/button_back"
+			        android:id="@+id/back"
+			        android:layout_marginTop="2dp"
+			        android:layout_alignParentLeft="true" />
+				
+			</RelativeLayout>
+			
+    <RelativeLayout 
+           	android:orientation="horizontal"
+         	android:layout_width="fill_parent"
+          	android:layout_height="wrap_content"
+          	android:layout_below="@+id/rlHeader"
+          	android:background="@drawable/textview"
+          	android:id="@+id/UpcomingHeader"
+          	android:gravity="center"
+          	android:visibility="gone" >
+		
+		    <TextView
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:text="@string/UPCOMING"
+			    android:textColor="@color/white1"
+			   	android:textSize="13dp"
+			    android:padding="5dp" />
+			
+    </RelativeLayout>
+	
+    		<LinearLayout
+		        xmlns:android="http://schemas.android.com/apk/res/android"
+		        android:layout_width="fill_parent"
+		        android:layout_height="50dp"
+		        android:gravity="center" 
+		        android:id="@+id/llLoading"
+		        android:layout_alignParentBottom="true"
+		        android:layout_centerHorizontal="true"
+		        android:visibility="gone" >
+		    
+		    <ProgressBar
+		        android:id="@+id/pbLoading"
+		        style="?android:attr/progressBarStyleSmall"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content" />
+		    
+		    </LinearLayout>
+
+</RelativeLayout>

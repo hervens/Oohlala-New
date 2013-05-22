@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:background="@color/white1" >
+    
+   			<RelativeLayout
+		        xmlns:android="http://schemas.android.com/apk/res/android"
+		        android:layout_width="fill_parent"
+		        android:layout_height="50dp"
+		        android:orientation="horizontal"
+		        android:background="@drawable/header_slice"
+		        android:id="@+id/rlHeader"
+		        android:paddingTop="5dp"
+		        android:paddingLeft="5dp"
+		        android:paddingRight="5dp"
+		        android:paddingBottom="5dp" >
+		       
+				<TextView  
+				    android:id="@+id/header"
+					android:layout_width="200dp" 
+					android:layout_height="35dp"
+					android:text="@string/ADD_EVENT"
+					android:textColor="@color/white1"
+					android:textSize="16dp"
+					android:maxLines="1"
+					android:layout_centerInParent="true"
+					android:gravity="center"
+					android:shadowRadius="1"
+  					android:shadowDx="0"
+  					android:shadowDy="-2"
+  					android:shadowColor="@color/shadow_color" />
+				
+				<Button
+			        android:layout_width="54dp"
+			        android:layout_height="35dp"
+			        android:background="@drawable/button_back"
+			        android:id="@+id/back"
+			        android:layout_marginTop="2dp"
+			        android:layout_alignParentLeft="true" />
+				
+				<TextView
+			        android:layout_width="54dp"
+			        android:layout_height="38dp"
+			        android:id="@+id/bAddEvent"
+			        android:text="@string/Save"
+		 			android:textSize="13dp"
+		 			android:textColor="@color/dimgrey3"
+					android:gravity="center"
+			        android:layout_marginTop="0dp"
+			        android:layout_alignParentRight="true"
+			        android:background="@drawable/compose_share_button_bg2" />
+
+			</RelativeLayout>
+	
+    <ScrollView
+	    android:id="@+id/scrollView"
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent"
+	   	android:layout_below="@+id/rlHeader"
+	    android:fadingEdge="none"
+	    android:scrollbarThumbVertical="@drawable/scrollbar_vertical_thumb" >
+					
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent"
+	    android:orientation="vertical"
+	    android:padding="10dp"
+	    android:background="@color/white1" >
+	    
+		<RelativeLayout 
+			android:layout_width="fill_parent"
+			android:layout_height="60dp"
+			android:id="@+id/rlTitle"
+			android:layout_marginTop="10dp" >
+				
+        <EditText
+            android:id="@+id/etTitle"
+	        android:layout_width="fill_parent"
+	        android:layout_height="60dp"
+        	android:paddingLeft="120dp"
+        	android:paddingRight="20dp"
+	        android:background="@drawable/edit_row_top"
+	        android:text=""
+	        android:textSize="18dp"
+	        android:textColor="@color/black1"
+	        android:inputType="textCapSentences"
+	        android:gravity="right|center" />
+        
+         <TextView
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="@string/Title"
+	        android:textSize="15dp"
+	        android:textColor="@color/dimgrey3"
+	        android:layout_centerVertical="true"
+	        android:layout_marginLeft="20dp" />
+        
+        </RelativeLayout>
+	
+     	<RelativeLayout 
+			android:layout_width="fill_parent"
+			android:layout_height="60dp"
+			android:id="@+id/rlLocation"
+			android:layout_below="@+id/rlTitle" >
+         
+    	<ImageView
+	        android:layout_width="fill_parent"
+	        android:layout_height="60dp"
+	        android:adjustViewBounds="true" 
+	        android:scaleType="centerCrop"
+	        android:background="@drawable/edit_row_middle" />
+        
+         <TextView
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="@string/Location"
+	        android:textSize="15dp"
+	        android:textColor="@color/dimgrey3"
+	        android:layout_centerVertical="true"
+	        android:layout_marginLeft="20dp" />
+         
+         <Button
+	        android:id="@+id/bLocation"
+	        android:layout_width="200dp"
+	        android:layout_height="wrap_content"
+	        android:hint="@string/add_location"
+	        android:textSize="18dp"
+	        android:textColor="@color/dimgrey3"
+	        android:layout_centerVertical="true"
+	        android:layout_marginRight="20dp"
+	        android:layout_marginLeft="120dp"
+	        android:layout_alignParentRight="true" />
+         
+        </RelativeLayout>
+        
+     	<RelativeLayout 
+			android:layout_width="fill_parent"
+			android:layout_height="60dp"
+			android:id="@+id/rlStart"
+			android:layout_below="@+id/rlLocation" >
+				
+        <ImageView
+	        android:layout_width="fill_parent"
+	        android:layout_height="60dp"
+	        android:adjustViewBounds="true" 
+	        android:scaleType="centerCrop"
+	        android:background="@drawable/edit_row_middle" />
+        
+         <TextView
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="@string/Start"
+	        android:textSize="15dp"
+	        android:textColor="@color/dimgrey3"
+	        android:layout_centerVertical="true"
+	        android:layout_marginLeft="20dp" />
+         
+         <Button
+	        android:id="@+id/bStartDate"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="Fri, Feb 15"
+	        android:textSize="18dp"
+	        android:textColor="@color/blue1"
+	        android:layout_centerVertical="true"
+	        android:layout_marginRight="120dp"
+	        android:layout_alignParentRight="true"
+	        android:layout_toLeftOf="@+id/bStartTime" />
+         
+         <Button
+	        android:id="@+id/bStartTime"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="18:00 pm"
+	        android:textSize="18dp"
+	        android:textColor="@color/blue1"
+	        android:layout_centerVertical="true"
+	        android:layout_marginRight="20dp"
+	        android:layout_marginLeft="120dp"
+	        android:layout_alignParentRight="true" />
+        
+        </RelativeLayout>
+
+     	<RelativeLayout 
+			android:layout_width="fill_parent"
+			android:layout_height="60dp"
+			android:id="@+id/rlEnd"
+			android:layout_below="@+id/rlStart" >
+				
+        <ImageView
+	        android:layout_width="fill_parent"
+	        android:layout_height="60dp"
+	        android:adjustViewBounds="true" 
+	        android:scaleType="centerCrop"
+	        android:background="@drawable/edit_row_middle" />
+        
+         <TextView
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="@string/End"
+	        android:textSize="15dp"
+	        android:textColor="@color/dimgrey3"
+	        android:layout_centerVertical="true"
+	        android:layout_marginLeft="20dp" />
+         
+         <Button
+	        android:id="@+id/bEndDate"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="Fri, Feb 15"
+	        android:textSize="18dp"
+	        android:textColor="@color/blue1"
+	        android:layout_centerVertical="true"
+	        android:layout_marginRight="120dp"
+	        android:layout_alignParentRight="true"
+	        android:layout_toLeftOf="@+id/bStartTime" />
+         
+         <Button
+	        android:id="@+id/bEndTime"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="19:00 pm"
+	        android:textSize="18dp"
+	        android:textColor="@color/blue1"
+	        android:layout_centerVertical="true"
+	        android:layout_marginRight="20dp"
+	        android:layout_marginLeft="120dp"
+	        android:layout_alignParentRight="true" />
+        
+        </RelativeLayout>
+        
+     	<RelativeLayout 
+			android:layout_width="fill_parent"
+			android:layout_height="60dp"
+			android:id="@+id/rlReminder"
+			android:layout_below="@+id/rlEnd" >
+         
+    	<ImageView
+	        android:layout_width="fill_parent"
+	        android:layout_height="60dp"
+	        android:adjustViewBounds="true" 
+	        android:scaleType="centerCrop"
+	        android:background="@drawable/edit_row_middle" />
+        
+         <TextView
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="@string/Reminder"
+	        android:textSize="15dp"
+	        android:textColor="@color/dimgrey3"
+	        android:layout_centerVertical="true"
+	        android:layout_marginLeft="20dp" />
+         
+         <Button
+	        android:id="@+id/bReminder"
+	        android:layout_width="200dp"
+	        android:layout_height="wrap_content"
+	        android:text="@string/one_hour_before"
+	        android:textSize="18dp"
+	        android:textColor="@color/blue1"
+	        android:layout_centerVertical="true"
+	        android:layout_marginRight="20dp"
+	        android:layout_marginLeft="120dp"
+	        android:layout_alignParentRight="true" />
+         
+        </RelativeLayout>
+        
+     	<RelativeLayout 
+			android:layout_width="fill_parent"
+			android:layout_height="60dp"
+			android:id="@+id/rlVisibleFriends"
+			android:layout_below="@+id/rlReminder" >
+         
+    	<ImageView
+	        android:layout_width="fill_parent"
+	        android:layout_height="60dp"
+	        android:adjustViewBounds="true" 
+	        android:scaleType="centerCrop"
+	        android:background="@drawable/edit_row_middle" />
+        
+         <TextView
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="@string/Visible_to_Friends"
+	        android:textSize="15dp"
+	        android:textColor="@color/dimgrey3"
+	        android:layout_centerVertical="true"
+	        android:layout_marginLeft="20dp" />
+         
+         <ToggleButton
+             android:id="@+id/tbVisible"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_alignParentRight="true"
+             android:layout_centerVertical="true"
+             android:layout_marginRight="20dp"
+	         android:layout_marginLeft="120dp"
+	         android:textOn="@string/Yes"
+	         android:textOff="@string/No"
+	         android:checked="true" />
+         
+        </RelativeLayout>
+        
+     	<RelativeLayout 
+			android:layout_width="fill_parent"
+			android:layout_height="60dp"
+			android:id="@+id/rlDelete"
+			android:layout_below="@+id/rlVisibleFriends" >
+				
+        <ImageView
+	        android:layout_width="fill_parent"
+	        android:layout_height="60dp"
+	        android:adjustViewBounds="true" 
+	        android:scaleType="centerCrop"
+	        android:background="@drawable/edit_row_bottom" />
+        
+         <Button
+	         	android:id="@+id/bDelete"
+		        android:layout_width="fill_parent"
+		        android:layout_height="40dp"
+		        android:text="@string/Delete"
+		        android:background="@drawable/campuswall_button_background"
+		        android:textColor="@color/dimgrey3"
+		        android:textSize="16dp"
+		        android:gravity="center"
+		        android:layout_marginLeft="20dp"
+		        android:layout_marginRight="20dp" />
+        
+        </RelativeLayout>
+        
+     	</LinearLayout>
+     </ScrollView>
+
+</RelativeLayout>

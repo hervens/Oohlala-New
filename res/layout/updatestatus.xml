@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+    
+    <RelativeLayout
+		        xmlns:android="http://schemas.android.com/apk/res/android"
+		        android:layout_width="fill_parent"
+		        android:layout_height="50dp"
+		        android:orientation="horizontal"
+		        android:background="@drawable/header_slice"
+		        android:id="@+id/rlHeader"
+		        android:paddingTop="5dp"
+		        android:paddingLeft="5dp"
+		        android:paddingRight="5dp"
+		        android:paddingBottom="5dp" >
+		       
+				<TextView  
+				    android:id="@+id/header"
+					android:layout_width="200dp" 
+					android:layout_height="35dp"
+					android:text="@string/Update_Status"
+					android:textColor="@color/white1"
+					android:textSize="16dp"
+					android:maxLines="1"
+					android:layout_centerInParent="true"
+					android:gravity="center"
+					android:shadowRadius="1"
+  					android:shadowDx="0"
+  					android:shadowDy="-2"
+  					android:shadowColor="@color/shadow_color" />
+				
+				<Button
+			        android:layout_width="54dp"
+			        android:layout_height="35dp"
+			        android:background="@drawable/button_back"
+			        android:id="@+id/back"
+			        android:layout_marginTop="2dp"
+			        android:layout_alignParentLeft="true" />
+				
+				<TextView
+			        android:layout_width="54dp"
+			        android:layout_height="38dp"
+			        android:id="@+id/bPostThread"
+			        android:text="@string/Done"
+		 			android:textSize="13dp"
+		 			android:textColor="@color/dimgrey3"
+					android:gravity="center"
+			        android:layout_marginTop="0dp"
+			        android:layout_alignParentRight="true"
+			        android:background="@drawable/compose_share_button_bg2" />
+
+			</RelativeLayout>
+
+	<EditText
+        android:id="@+id/etPostThread"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:singleLine="false" 
+        android:gravity="top" 
+        android:padding="10dp"
+        android:background="@color/white1"
+        android:layout_below="@+id/rlHeader"
+        android:layout_above="@+id/bottom" />
+			
+    
+    		<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+			    android:layout_width="fill_parent"
+			    android:layout_height="40dp"
+			    android:orientation="horizontal"
+			    android:background="@drawable/rounded_corner_row_bg_state"
+			    android:id="@+id/bottom"
+			    android:layout_alignParentBottom="true" >
+
+		        <TextView
+			        android:id="@+id/tvWordsLeft"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:text=""
+			        android:textColor="@color/dimgrey3"
+			        android:layout_alignParentRight="true"
+			        android:layout_centerVertical="true"
+			        android:layout_marginRight="20dp" />
+
+			</RelativeLayout>
+		
+         <ImageView
+	        android:id="@+id/ivPreview"
+	        android:layout_width="60dp"
+	        android:layout_height="wrap_content"
+	        android:adjustViewBounds="true" 
+        	android:scaleType="centerCrop"
+        	android:padding="5dp"
+        	android:background="@drawable/profile_pic_bg2"
+        	android:layout_above="@+id/bottom"
+        	android:layout_marginLeft="10dp"
+        	android:layout_marginBottom="10dp"
+        	android:visibility="gone" />	
+    
+</RelativeLayout>

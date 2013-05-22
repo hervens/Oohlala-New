@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	    android:layout_width="fill_parent"
+	    android:layout_height="60dp"
+	    android:id="@+id/bg" >  
+	    
+    <ImageView
+        android:id="@+id/ivBg"
+        android:layout_width="fill_parent"
+        android:layout_height="60dp"
+        android:adjustViewBounds="true" 
+        android:scaleType="centerCrop"
+        android:background="@drawable/edit_row_middle" />
+    
+    <TextView
+        android:id="@+id/tvStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="09:00 AM"
+        android:textSize="15dp"
+        android:textColor="@color/black1"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="5dp"
+        android:layout_toRightOf="@+id/ivIcon" />
+    
+    <TextView
+        android:id="@+id/tvBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="-"
+        android:textSize="15dp"
+        android:textColor="@color/black1"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="5dp"
+        android:layout_toRightOf="@+id/tvStart" />
+    
+    <TextView
+        android:id="@+id/tvStop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="09:00 AM"
+        android:textSize="15dp"
+        android:textColor="@color/black1"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/tvBar" />
+    
+    <ImageView
+			        android:layout_width="10dp"
+			        android:layout_height="14dp"
+			        android:layout_alignParentRight="true"
+			        android:layout_centerVertical="true"
+			        android:layout_marginRight="20dp"
+			        android:adjustViewBounds="true" 
+			        android:scaleType="centerCrop"
+			        android:src="@drawable/list_pointer" />
+       
+</RelativeLayout>

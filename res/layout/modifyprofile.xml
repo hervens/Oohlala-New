@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:background="@color/white1" >
+    
+    <RelativeLayout
+		        xmlns:android="http://schemas.android.com/apk/res/android"
+		        android:layout_width="fill_parent"
+		        android:layout_height="50dp"
+		        android:orientation="horizontal"
+		        android:background="@drawable/header_slice"
+		        android:id="@+id/rlHeader"
+		        android:paddingTop="5dp"
+		        android:paddingLeft="5dp"
+		        android:paddingRight="5dp"
+		        android:paddingBottom="5dp" >
+		       
+				<TextView  
+				    android:id="@+id/header"
+					android:layout_width="200dp" 
+					android:layout_height="35dp"
+					android:text="@string/Edit_Profile"
+					android:textColor="@color/white1"
+					android:textSize="16dp"
+					android:maxLines="1"
+					android:layout_centerInParent="true"
+					android:gravity="center"
+					android:shadowRadius="1"
+  					android:shadowDx="0"
+  					android:shadowDy="-2"
+  					android:shadowColor="@color/shadow_color" />
+				
+				<Button
+			        android:layout_width="54dp"
+			        android:layout_height="35dp"
+			        android:background="@drawable/button_back"
+			        android:id="@+id/back"
+			        android:layout_marginTop="2dp"
+			        android:layout_alignParentLeft="true" />
+
+			</RelativeLayout>
+		
+    <RelativeLayout 
+	        android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:layout_below="@+id/rlHeader"
+			android:id="@+id/content" >
+		
+    <TextView
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:text="@string/Modify_Profile"
+	        android:textColor="@color/white1"
+	        android:textSize="13dp"
+	        android:padding="5dp"
+	        android:background="@drawable/textview"
+	        android:id="@+id/tvModifyProfile"
+	        android:visibility="gone" />
+    
+    <ScrollView
+	    android:id="@+id/scrollView"
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent"
+	   	android:layout_below="@+id/tvModifyProfile"
+	    android:fadingEdge="none"
+	    android:scrollbarThumbVertical="@drawable/scrollbar_vertical_thumb" >
+					
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent"
+	    android:orientation="vertical"
+	    android:padding="10dp"
+	    android:background="@color/white1" >
+	    
+        <RelativeLayout 
+			android:layout_width="fill_parent"
+			android:layout_height="60dp"
+			android:id="@+id/rlThumb" >
+				
+        <ImageView
+	        android:layout_width="fill_parent"
+	        android:layout_height="60dp"
+	        android:adjustViewBounds="true" 
+	        android:scaleType="centerCrop"
+	        android:background="@drawable/edit_row" />
+        
+        <ImageView
+	        android:id="@+id/ivThumb"
+	        android:layout_width="50dp"
+	        android:layout_height="50dp"
+	        android:adjustViewBounds="true" 
+	        android:scaleType="centerCrop"
+	        android:layout_margin="5dp" />
+        
+         <TextView
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="@string/Upload_a_new_photo"
+	        android:textSize="15dp"
+	        android:textColor="@color/dimgrey3"
+	        android:layout_centerVertical="true"
+	        android:layout_marginLeft="10dp"
+	        android:layout_toRightOf="@+id/ivThumb" />
+        
+        </RelativeLayout>
+		
+        <RelativeLayout 
+			android:layout_width="fill_parent"
+			android:layout_height="60dp"
+			android:id="@+id/rlFirstName"
+			android:layout_marginTop="10dp" >
+				
+        <EditText
+            android:id="@+id/etFirstName"
+	        android:layout_width="fill_parent"
+	        android:layout_height="60dp"
+        	android:paddingLeft="120dp"
+        	android:paddingRight="20dp"
+	        android:background="@drawable/edit_row_top"
+	        android:text="Jamesxxxxxxxxddddddddddwwwwwwwwwwww"
+	        android:textSize="18dp"
+	        android:textColor="@color/black1"
+	        android:inputType="textCapSentences"
+	        android:gravity="right|center" />
+        
+         <TextView
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="@string/First_Name"
+	        android:textSize="15dp"
+	        android:textColor="@color/dimgrey3"
+	        android:layout_centerVertical="true"
+	        android:layout_marginLeft="20dp" />
+        
+        </RelativeLayout>
+	
+     	<RelativeLayout 
+			android:layout_width="fill_parent"
+			android:layout_height="60dp"
+			android:id="@+id/rlSecondName"
+			android:layout_below="@+id/rlFirstName" >
+				
+        <EditText
+            android:id="@+id/etSecondName"
+	        android:layout_width="fill_parent"
+	        android:layout_height="60dp"
+        	android:paddingLeft="120dp"
+        	android:paddingRight="20dp"
+	        android:background="@drawable/edit_row_middle"
+	        android:text="Wangdddddddddddddbbbbbxxxx"
+	        android:textSize="18dp"
+	        android:textColor="@color/black1"
+	        android:inputType="textCapSentences"
+	        android:gravity="right|center" />
+        
+         <TextView
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="@string/Last_Name"
+	        android:textSize="15dp"
+	        android:textColor="@color/dimgrey3"
+	        android:layout_centerVertical="true"
+	        android:layout_marginLeft="20dp" />
+         
+        </RelativeLayout>
+        
+     	<RelativeLayout 
+			android:layout_width="fill_parent"
+			android:layout_height="60dp"
+			android:id="@+id/rlBirthday"
+			android:layout_below="@+id/rlSecondName" >
+				
+        <ImageView
+	        android:layout_width="fill_parent"
+	        android:layout_height="60dp"
+	        android:adjustViewBounds="true" 
+	        android:scaleType="centerCrop"
+	        android:background="@drawable/edit_row_middle" />
+        
+         <TextView
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="@string/Birthday"
+	        android:textSize="15dp"
+	        android:textColor="@color/dimgrey3"
+	        android:layout_centerVertical="true"
+	        android:layout_marginLeft="20dp" />
+         
+         <TextView
+	        android:id="@+id/tvBirthday"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="1990-02-19wwwwwwwwwwwwwwwdddddddddddd"
+	        android:textSize="18dp"
+	        android:textColor="@color/black1"
+	        android:layout_centerVertical="true"
+	        android:layout_marginRight="20dp"
+	        android:layout_marginLeft="120dp"
+	        android:layout_alignParentRight="true"
+	        android:lines="1" />
+        
+        </RelativeLayout>
+
+     	<RelativeLayout 
+			android:layout_width="fill_parent"
+			android:layout_height="60dp"
+			android:id="@+id/rlRelationship"
+			android:layout_below="@+id/rlBirthday" >
+				
+        <ImageView
+	        android:layout_width="fill_parent"
+	        android:layout_height="60dp"
+	        android:adjustViewBounds="true" 
+	        android:scaleType="centerCrop"
+	        android:background="@drawable/edit_row_middle" />
+        
+         <TextView
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="@string/Relationship_Status"
+	        android:textSize="15dp"
+	        android:textColor="@color/dimgrey3"
+	        android:layout_centerVertical="true"
+	        android:layout_marginLeft="20dp" />
+         
+         <TextView
+	        android:id="@+id/tvRelationship"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="InaRelationshipsssssssssxxxxx"
+	        android:textSize="18dp"
+	        android:textColor="@color/black1"
+	        android:layout_centerVertical="true"
+	        android:layout_marginRight="20dp"
+	        android:layout_marginLeft="120dp"
+	        android:layout_alignParentRight="true"
+	        android:lines="1" />
+        
+        </RelativeLayout>
+     	
+      	<RelativeLayout 
+			android:layout_width="fill_parent"
+			android:layout_height="70dp"
+			android:id="@+id/rlButton"
+			android:layout_below="@+id/rlRelationship" >
+				
+        <ImageView
+	        android:id="@+id/ivLocationBg"
+	        android:layout_width="fill_parent"
+	        android:layout_height="70dp"
+	        android:adjustViewBounds="true" 
+	        android:scaleType="centerCrop"
+	        android:background="@drawable/edit_row_bottom" />
+      	
+      		<Button
+	         	android:id="@+id/bSave"
+		        android:layout_width="fill_parent"
+		        android:layout_height="40dp"
+		        android:text="@string/Save"
+		        android:background="@drawable/campuswall_button_background"
+		        android:textColor="@color/dimgrey3"
+		        android:textSize="16dp"
+		        android:gravity="center"
+		        android:layout_marginTop="10dp"
+		        android:layout_marginLeft="20dp"
+		        android:layout_marginRight="20dp" />
+      	
+      	</RelativeLayout>
+    
+    </LinearLayout>
+    </ScrollView>
+    
+    </RelativeLayout>
+
+</RelativeLayout>

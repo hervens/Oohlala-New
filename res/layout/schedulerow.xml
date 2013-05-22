@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	    android:layout_width="fill_parent"
+	    android:layout_height="60dp"
+	    android:id="@+id/bg" >  
+	    
+     <ImageView
+        android:id="@+id/ivBg"
+        android:layout_width="fill_parent"
+        android:layout_height="60dp"
+        android:adjustViewBounds="true" 
+        android:scaleType="centerCrop"
+        android:background="@drawable/edit_row_top" />
+    
+    <ImageView
+        android:id="@+id/ivTimebg"
+        android:layout_width="180dp"
+        android:layout_height="50dp"
+        android:adjustViewBounds="true" 
+        android:scaleType="centerCrop"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/schedule_day_bg" />
+    
+    <ImageView
+        android:id="@+id/ivIcon"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:adjustViewBounds="true" 
+        android:scaleType="centerCrop"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="5dp"
+        android:background="@drawable/schedule_day_icon" />
+    
+    <TextView
+        android:id="@+id/tvStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="09:00 AM"
+        android:textSize="15dp"
+        android:textColor="@color/white1"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="5dp"
+        android:layout_toRightOf="@+id/ivIcon" />
+    
+    <TextView
+        android:id="@+id/tvBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="-"
+        android:textSize="15dp"
+        android:textColor="@color/white1"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="5dp"
+        android:layout_toRightOf="@+id/tvStart" />
+    
+    <TextView
+        android:id="@+id/tvStop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="09:00 AM"
+        android:textSize="15dp"
+        android:textColor="@color/white1"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/tvBar" />
+    
+    <TextView
+        android:id="@+id/tvCode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="BREE319"
+        android:textSize="18dp"
+        android:textColor="@color/black1"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="15dp"
+        android:layout_toRightOf="@+id/ivTimebg" />
+       
+</RelativeLayout>

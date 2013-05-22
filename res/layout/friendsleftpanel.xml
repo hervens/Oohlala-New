@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>		
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:background="@color/white1" >
+    
+    <RelativeLayout
+		        xmlns:android="http://schemas.android.com/apk/res/android"
+		        android:layout_width="fill_parent"
+		        android:layout_height="50dp"
+		        android:orientation="horizontal"
+		        android:background="@drawable/header_slice"
+		        android:id="@+id/rlHeader"
+		        android:paddingTop="5dp"
+		        android:paddingLeft="5dp"
+		        android:paddingRight="5dp"
+		        android:paddingBottom="5dp" >
+		       
+				<TextView  
+				    android:id="@+id/header"
+					android:layout_width="200dp" 
+					android:layout_height="35dp"
+					android:text="@string/FRIENDS"
+					android:textColor="@color/white1"
+					android:textSize="16dp"
+					android:maxLines="1"
+					android:layout_centerInParent="true"
+					android:gravity="center"
+					android:shadowRadius="1"
+  					android:shadowDx="0"
+  					android:shadowDy="-2"
+  					android:shadowColor="@color/shadow_color" />
+				
+				<com.gotoohlala.TopMenuNavbar  
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:id="@+id/bTopMenuNavBar"
+			        android:layout_marginTop="2dp"
+			        android:layout_alignParentLeft="true" />
+				
+				<Button
+			        android:layout_width="50dp"
+			        android:layout_height="36dp"
+			        android:background="@drawable/button_add"
+			        android:id="@+id/bAdd"
+			        android:layout_marginTop="3dp"
+			        android:layout_alignParentRight="true" />
+
+			</RelativeLayout>
+			
+    		<RelativeLayout
+    		    android:id="@+id/rlBanner"
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        android:layout_below="@+id/rlHeader"
+		        android:visibility="gone" >
+				
+    		    <ImageView
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:src="@drawable/banner_connect"
+			        android:scaleType="centerCrop"
+			        android:adjustViewBounds="true" />
+    		    
+    		    <TextView  
+				    android:id="@+id/tvTitle"
+					android:layout_width="190dp" 
+					android:layout_height="wrap_content"
+					android:text="@string/Find_your_Facebook_Friends_that_are_on_OOHLALA"
+					android:textSize="14dp"
+					android:textColor="@color/black1"
+					android:layout_alignParentRight="true"
+					android:paddingTop="10dp"
+					android:paddingRight="10dp" />
+    		    
+    		    <TextView  
+				    android:id="@+id/tvButton"
+					android:layout_width="160dp" 
+					android:layout_height="30dp"
+					android:text="@string/Find_Facebook_Friends"
+					android:textSize="14dp"
+					android:textColor="@color/white1"
+					android:layout_alignParentRight="true"
+					android:layout_below="@+id/tvTitle"
+					android:layout_marginRight="30dp"
+					android:layout_marginTop="5dp"
+					android:background="@drawable/button_blue"
+					android:gravity="center" />
+				
+        	</RelativeLayout>
+
+		    <com.handmark.pulltorefresh.library.PullToRefreshListView
+		        android:id="@+id/lvFriends"
+		        android:layout_width="fill_parent"
+		        android:layout_height="fill_parent"
+		        android:dividerHeight="0dp"
+				android:fadingEdge="none"
+				android:listSelector="@color/realtransparent"
+				android:scrollbarThumbVertical="@drawable/scrollbar_vertical_thumb"
+				android:layout_below="@+id/rlBanner"
+				android:scrollbars="none"
+				android:layout_marginTop="-1dp" /> 
+
+</RelativeLayout>

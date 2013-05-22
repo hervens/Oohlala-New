@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+		android:background="@color/white1" >
+		
+    		<RelativeLayout
+		        xmlns:android="http://schemas.android.com/apk/res/android"
+		        android:layout_width="fill_parent"
+		        android:layout_height="50dp"
+		        android:orientation="horizontal"
+		        android:background="@drawable/header_slice"
+		        android:id="@+id/rlHeader"
+		        android:paddingTop="5dp"
+		        android:paddingLeft="5dp"
+		        android:paddingRight="5dp"
+		        android:paddingBottom="5dp" >
+		       
+				<TextView  
+				    android:id="@+id/header"
+					android:layout_width="200dp" 
+					android:layout_height="35dp"
+					android:text=""
+					android:textColor="@color/white1"
+					android:textSize="16dp"
+					android:maxLines="1"
+					android:layout_centerInParent="true"
+					android:gravity="center" />
+				
+				<Button
+			        android:layout_width="54dp"
+			        android:layout_height="35dp"
+			        android:background="@drawable/button_back"
+			        android:id="@+id/back"
+			        android:layout_marginTop="2dp"
+			        android:layout_alignParentLeft="true" />
+				
+				<Button
+			        android:layout_width="54dp"
+			        android:layout_height="38dp"
+			        android:background="@drawable/compose_share_button_bg"
+			        android:id="@+id/bGameRule"
+			        android:text="@string/Rules"
+		 			android:textSize="13dp"
+		 			android:textColor="@color/dimgrey3"
+					android:gravity="center"
+			        android:layout_marginTop="0dp"
+			        android:layout_alignParentRight="true" />
+
+			</RelativeLayout>
+
+    <ImageView
+        android:id="@+id/ivGameImage"
+        android:layout_below="@+id/rlHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true" 
+        android:scaleType="centerCrop"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/tvGameName"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/ivGameImage"
+        android:background="@drawable/textviewtransparent"
+        android:paddingLeft="15dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:text=""
+        android:textSize="20dp"
+        android:textColor="@color/white1" />
+	    
+    	<TextView
+    	    android:id="@+id/tvWinners"
+    	    android:layout_width="fill_parent"
+        	android:layout_height="wrap_content"
+        	android:layout_below="@+id/ivGameImage"
+	        android:paddingTop="5dp"
+	        android:paddingBottom="5dp"
+	        android:gravity="center"
+	        android:text="@string/Winners"
+	        android:textSize="20dp"
+	        android:textColor="@color/black1"
+	        android:background="@color/white1"
+			android:cacheColorHint="@color/white1" />
+    	
+    	<RelativeLayout
+    	    android:id="@+id/rlFirstPlace"
+    	    android:layout_width="fill_parent"
+        	android:layout_height="wrap_content"
+        	android:layout_below="@+id/tvWinners"
+        	android:orientation="horizontal"
+        	android:background="@color/white1"
+			android:cacheColorHint="@color/white1"
+			android:visibility="gone" >
+    	    
+    	    <ImageView
+    	        android:id="@+id/ivFirstPlace"
+	    	    android:layout_width="40dp"
+        		android:layout_height="40dp"
+        		android:layout_margin="5dp"
+        		android:adjustViewBounds="true" 
+        		android:scaleType="centerCrop" />
+    	    
+    	    <TextView
+	    	    android:id="@+id/tvFirstPlaceTitle"
+	    	    android:layout_width="wrap_content"
+	        	android:layout_height="wrap_content"
+	        	android:layout_toRightOf="@+id/ivFirstPlace"
+	        	android:text="@string/Winners_to_be_announced"
+	        	android:textSize="13dp"
+	        	android:textColor="@color/black1"
+	        	android:layout_marginTop="5dp" />
+    	    
+    	    <TextView
+	    	    android:id="@+id/tvFirstPlaceName"
+	    	    android:layout_width="wrap_content"
+	        	android:layout_height="wrap_content"
+	        	android:layout_toRightOf="@+id/ivFirstPlace"
+	        	android:layout_below="@+id/tvFirstPlaceTitle"
+	        	android:text="@string/Winners_to_be_announced"
+	        	android:textSize="13dp"
+	        	android:textColor="@color/black1" />
+    	    
+    	</RelativeLayout>
+        
+    	<RelativeLayout
+    	    android:id="@+id/rlSecondPlace"
+    	    android:layout_width="fill_parent"
+        	android:layout_height="wrap_content"
+        	android:layout_below="@+id/rlFirstPlace"
+        	android:orientation="horizontal"
+        	android:paddingBottom="5dp"
+        	android:background="@color/white1"
+			android:cacheColorHint="@color/white1"
+			android:visibility="gone" >
+    	    
+    	    <ImageView
+    	        android:id="@+id/ivSecondPlace"
+	    	    android:layout_width="40dp"
+        		android:layout_height="40dp"
+        		android:layout_margin="5dp"
+        		android:adjustViewBounds="true" 
+        		android:scaleType="centerCrop" />
+    	    
+    	    <TextView
+	    	    android:id="@+id/tvSecondPlaceTitle"
+	    	    android:layout_width="wrap_content"
+	        	android:layout_height="wrap_content"
+	        	android:layout_toRightOf="@+id/ivSecondPlace"
+	        	android:text="@string/Winners_to_be_announced"
+	        	android:textSize="13dp"
+	        	android:textColor="@color/black1"
+	        	android:layout_marginTop="5dp" />
+    	    
+    	    <TextView
+	    	    android:id="@+id/tvSecondPlaceName"
+	    	    android:layout_width="wrap_content"
+	        	android:layout_height="wrap_content"
+	        	android:layout_toRightOf="@+id/ivSecondPlace"
+	        	android:layout_below="@+id/tvSecondPlaceTitle"
+	        	android:text="@string/Winners_to_be_announced"
+	        	android:textSize="13dp"
+	        	android:textColor="@color/black1" />
+    	    
+    	</RelativeLayout>
+    	
+    	<RelativeLayout
+    	    android:id="@+id/rlThirdPlace"
+    	    android:layout_width="fill_parent"
+        	android:layout_height="wrap_content"
+        	android:layout_below="@+id/rlSecondPlace"
+        	android:orientation="horizontal"
+        	android:paddingBottom="5dp"
+        	android:background="@color/white1"
+			android:cacheColorHint="@color/white1"
+			android:visibility="gone" >
+    	    
+    	    <ImageView
+    	        android:id="@+id/ivThirdPlace"
+	    	    android:layout_width="40dp"
+        		android:layout_height="40dp"
+        		android:layout_margin="5dp"
+        		android:adjustViewBounds="true" 
+        		android:scaleType="centerCrop" />
+    	    
+    	    <TextView
+	    	    android:id="@+id/tvThirdPlaceTitle"
+	    	    android:layout_width="wrap_content"
+	        	android:layout_height="wrap_content"
+	        	android:layout_toRightOf="@+id/ivThirdPlace"
+	        	android:text="@string/Winners_to_be_announced"
+	        	android:textSize="13dp"
+	        	android:textColor="@color/black1"
+	        	android:layout_marginTop="5dp" />
+    	    
+    	    <TextView
+	    	    android:id="@+id/tvThirdPlaceName"
+	    	    android:layout_width="wrap_content"
+	        	android:layout_height="wrap_content"
+	        	android:layout_toRightOf="@+id/ivThirdPlace"
+	        	android:layout_below="@+id/tvThirdPlaceTitle"
+	        	android:text="@string/Winners_to_be_announced"
+	        	android:textSize="13dp"
+	        	android:textColor="@color/black1" />
+    	    
+    	</RelativeLayout>
+    	
+    	<RelativeLayout
+    	    android:id="@+id/rlForthPlace"
+    	    android:layout_width="fill_parent"
+        	android:layout_height="wrap_content"
+        	android:layout_below="@+id/rlThirdPlace"
+        	android:orientation="horizontal"
+        	android:paddingBottom="5dp"
+        	android:background="@color/white1"
+			android:cacheColorHint="@color/white1"
+			android:visibility="gone" >
+    	    
+    	    <ImageView
+    	        android:id="@+id/ivForthPlace"
+	    	    android:layout_width="40dp"
+        		android:layout_height="40dp"
+        		android:layout_margin="5dp"
+        		android:adjustViewBounds="true" 
+        		android:scaleType="centerCrop" />
+    	    
+    	    <TextView
+	    	    android:id="@+id/tvForthPlaceTitle"
+	    	    android:layout_width="wrap_content"
+	        	android:layout_height="wrap_content"
+	        	android:layout_toRightOf="@+id/ivForthPlace"
+	        	android:text="@string/Winners_to_be_announced"
+	        	android:textSize="13dp"
+	        	android:textColor="@color/black1"
+	        	android:layout_marginTop="5dp" />
+    	    
+    	    <TextView
+	    	    android:id="@+id/tvForthPlaceName"
+	    	    android:layout_width="wrap_content"
+	        	android:layout_height="wrap_content"
+	        	android:layout_toRightOf="@+id/ivForthPlace"
+	        	android:layout_below="@+id/tvForthPlaceTitle"
+	        	android:text="@string/Winners_to_be_announced"
+	        	android:textSize="13dp"
+	        	android:textColor="@color/black1" />
+    	    
+    	</RelativeLayout>
+    	
+    	<RelativeLayout
+    	    android:id="@+id/rlFifthPlace"
+    	    android:layout_width="fill_parent"
+        	android:layout_height="wrap_content"
+        	android:layout_below="@+id/rlForthPlace"
+        	android:orientation="horizontal"
+        	android:paddingBottom="5dp"
+        	android:background="@color/white1"
+			android:cacheColorHint="@color/white1"
+			android:visibility="gone" >
+    	    
+    	    <ImageView
+    	        android:id="@+id/ivFifthPlace"
+	    	    android:layout_width="40dp"
+        		android:layout_height="40dp"
+        		android:layout_margin="5dp"
+        		android:adjustViewBounds="true" 
+        		android:scaleType="centerCrop" />
+    	    
+    	    <TextView
+	    	    android:id="@+id/tvFifthPlaceTitle"
+	    	    android:layout_width="wrap_content"
+	        	android:layout_height="wrap_content"
+	        	android:layout_toRightOf="@+id/ivFifthPlace"
+	        	android:text="@string/Winners_to_be_announced"
+	        	android:textSize="13dp"
+	        	android:textColor="@color/black1"
+	        	android:layout_marginTop="5dp" />
+    	    
+    	    <TextView
+	    	    android:id="@+id/tvFifthPlaceName"
+	    	    android:layout_width="wrap_content"
+	        	android:layout_height="wrap_content"
+	        	android:layout_toRightOf="@+id/ivFifthPlace"
+	        	android:layout_below="@+id/tvFifthPlaceTitle"
+	        	android:text="@string/Winners_to_be_announced"
+	        	android:textSize="13dp"
+	        	android:textColor="@color/black1" />
+    	    
+    	</RelativeLayout>
+    	
+</RelativeLayout>

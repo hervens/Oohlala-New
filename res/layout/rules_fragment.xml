@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFB700"
+    android:orientation="vertical" >
+    <LinearLayout 
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EDE1CB"
+    android:orientation="vertical" >
+				<RelativeLayout
+			        
+			        android:layout_width="fill_parent"
+			        android:layout_height="50dp"
+			        android:orientation="horizontal"
+			        android:background="@drawable/header_slice"
+			        android:id="@+id/rlHeader"
+			        android:paddingTop="5dp"
+			        android:paddingLeft="5dp"
+			        android:paddingRight="5dp"
+			        android:paddingBottom="5dp" >
+		       
+				<TextView  
+				    android:id="@+id/header"
+					android:layout_width="200dp" 
+					android:layout_height="35dp"
+					android:text="@string/SCHEDULE"
+					android:textColor="@color/white1"
+					android:textSize="16dp"
+					android:layout_centerInParent="true"
+					android:gravity="center"
+					android:shadowRadius="1"
+  					android:shadowDx="0"
+  					android:shadowDy="-2"
+  					android:shadowColor="@color/shadow_color" />
+				
+				<com.gotoohlala.TopMenuNavbar  
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:id="@+id/bTopMenuNavBar"
+			        android:layout_marginTop="2dp"
+			        android:layout_alignParentLeft="true" />
+				
+				<Button
+			        android:layout_width="50dp"
+			        android:layout_height="36dp"
+			        android:background="@drawable/button_add"
+			        android:id="@+id/bAdd"
+			        android:layout_marginTop="3dp"
+			        android:layout_alignParentRight="true" />
+				
+			</RelativeLayout>
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20px"
+        android:gravity="center"
+        android:text="Discover My Campus"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="#172CAF"
+        android:textSize="45px"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/imgCampusStart"
+        android:layout_width="match_parent"
+        android:layout_height="134dp"
+        android:layout_gravity="top|center_horizontal"
+        android:layout_marginTop="15px"
+        android:scaleType="centerInside"
+        android:src="@drawable/discovercampuspic" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_marginTop="15px"
+        android:layout_width="wrap_content"
+        android:layout_height="40px"
+        android:text="Please select a tour to continue"
+        android:paddingLeft="5px"
+        android:textSize="25px"
+        android:textColor="#172CAF"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+          <ListView
+        android:id="@+id/myTourList"
+        android:background="#0969A2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+    </ListView>
+
+</LinearLayout>
+</RelativeLayout>

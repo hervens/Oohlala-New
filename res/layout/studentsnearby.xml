@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:background="@color/white1" >
+    
+    <RelativeLayout
+		        xmlns:android="http://schemas.android.com/apk/res/android"
+		        android:layout_width="fill_parent"
+		        android:layout_height="50dp"
+		        android:orientation="horizontal"
+		        android:background="@drawable/header_slice"
+		        android:id="@+id/rlHeader"
+		        android:paddingTop="5dp"
+		        android:paddingLeft="5dp"
+		        android:paddingRight="5dp"
+		        android:paddingBottom="5dp" >
+		       
+				<TextView  
+				    android:id="@+id/header"
+					android:layout_width="200dp" 
+					android:layout_height="35dp"
+					android:text="@string/Students"
+					android:textColor="@color/white1"
+					android:textSize="16dp"
+					android:maxLines="1"
+					android:layout_centerInParent="true"
+					android:gravity="center"
+					android:shadowRadius="1"
+  					android:shadowDx="0"
+  					android:shadowDy="-2"
+  					android:shadowColor="@color/shadow_color" />
+				
+				<com.gotoohlala.TopMenuNavbar  
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:id="@+id/bTopMenuNavBar"
+			        android:layout_marginTop="2dp"
+			        android:layout_alignParentLeft="true" />
+
+			</RelativeLayout>
+		        
+	<RelativeLayout
+	    xmlns:android="http://schemas.android.com/apk/res/android"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:background="@drawable/rounded_corner_row_bg3"
+	    android:cacheColorHint="@drawable/rounded_corner_row_bg3"
+	    android:id="@+id/UserUpdate"
+	    android:paddingBottom="5dp"
+	    android:paddingRight="10dp"
+	    android:layout_below="@+id/rlHeader" >
+
+    <ImageView
+        android:id="@+id/ivThumb"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:scaleType="centerCrop"
+        android:padding="5dp"
+        android:background="@drawable/profile_pic_bg2" >
+    </ImageView>
+    
+    <ImageView
+	  	android:id="@+id/EditProfilePic"
+	    android:layout_width="20dp"
+		android:layout_height="20dp"
+		android:src="@drawable/edit_avatar"
+		android:layout_marginLeft="65dp"
+        android:layout_marginTop="65dp" />
+	    
+    <TextView
+        android:id="@+id/tvProfileName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textColor="@color/black"
+        android:textSize="16dp"
+        android:paddingLeft="0dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="5dp"
+	    android:paddingTop="10dp"
+	    android:layout_toRightOf="@+id/ivThumb" >
+    </TextView>
+    
+     <Button
+        android:id="@+id/bGoOnline"
+        android:layout_width="40dp"
+        android:layout_height="30dp"
+        android:background="@drawable/ui_online"
+        android:layout_marginBottom="5dp"
+		android:layout_marginTop="10dp"
+	    android:layout_alignParentRight="true" />
+    
+    <EditText
+        android:id="@+id/etStatus"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:focusableInTouchMode="true"
+        android:focusable="true"
+        android:layout_toRightOf="@+id/ivThumb"
+        android:layout_below="@+id/bGoOnline"
+        android:inputType="textPersonName"
+        android:singleLine="true" />
+	
+    <!-- 
+     <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:orientation="horizontal" >
+    <TextView
+        android:id="@+id/tvCheckinStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="You haven't checked in"
+        android:textSize="13dp"
+        android:textColor="@color/black" >
+    </TextView>
+    <Button
+        android:id="@+id/bCheckin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="check-in"
+        android:textColor="@color/white1"
+        android:textSize="10dp"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/buttonlike" />
+    
+    </RelativeLayout> 
+    -->  
+	</RelativeLayout>
+
+	  	<com.handmark.pulltorefresh.library.PullToRefreshListView 
+		   	android:layout_width="fill_parent"
+			android:layout_height="fill_parent"
+			android:layout_below="@+id/UserUpdate"
+			android:layout_above="@+id/llLoading"
+			android:id="@+id/lvStudentsNearby"
+			android:fadingEdge="none"
+			android:scrollbarThumbVertical="@drawable/scrollbar_vertical_thumb"
+			android:scrollbars="none" />
+			
+	  		<!-- 
+		  	<ListView 
+			   	android:layout_width="fill_parent"
+				android:layout_height="fill_parent"
+				android:layout_below="@+id/UserUpdate"
+				android:layout_above="@+id/llLoading"
+				android:id="@+id/lvLocationList"
+				android:fadingEdge="none"
+				android:visibility="gone" >
+			</ListView>
+			 -->
+			 
+		  	<TextView 
+		   	    android:id="@+id/tvNoStudents"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_below="@+id/UserUpdate"
+				android:layout_above="@+id/llLoading"
+				android:gravity="center"
+				android:layout_marginTop="100dp"
+				android:layout_centerHorizontal="true"
+				android:textSize="15dp"
+				android:textColor="@color/black1"
+				android:text="@string/Please_logon_to_see_nearby_students"
+				android:visibility="gone" />
+	
+  			<LinearLayout
+		        xmlns:android="http://schemas.android.com/apk/res/android"
+		        android:layout_width="fill_parent"
+		        android:layout_height="50dp"
+		        android:gravity="center"
+		        android:id="@+id/llLoading"
+		        android:layout_alignParentBottom="true"
+		        android:layout_centerHorizontal="true"
+		        android:visibility="gone">
+		    
+		    <ProgressBar
+		        android:id="@+id/pbLoading"
+		        style="?android:attr/progressBarStyleSmall"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content" />
+		    
+		    </LinearLayout>
+	 
+</RelativeLayout>

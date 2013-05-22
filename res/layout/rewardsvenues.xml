@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:background="@color/white1"
+	android:cacheColorHint="@color/white1" >
+
+    <com.handmark.pulltorefresh.library.PullToRefreshListView
+        android:id="@+id/lvRewardsVenues"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/brown2"
+		android:cacheColorHint="@color/white1"
+		android:fadingEdge="none"
+		android:scrollbarThumbVertical="@drawable/scrollbar_vertical_thumb"
+		android:scrollbars="none" />
+
+</LinearLayout>

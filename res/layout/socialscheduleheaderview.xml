@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+    
+		<LinearLayout
+		    xmlns:android="http://schemas.android.com/apk/res/android"
+			android:layout_width="fill_parent"
+			android:layout_height="70dp"
+			android:orientation="horizontal"
+			android:background="@drawable/schedule_day_panel_bg"
+			android:id="@+id/rlDayPanel" >
+		       
+   		 	    <RelativeLayout
+			        android:layout_width="150dp"
+			        android:layout_height="70dp"
+			        android:orientation="horizontal"
+			        android:id="@+id/rlDayPanel1"
+			        android:layout_marginLeft="40dp"
+			        android:layout_weight="1" >
+		
+   		 	        <TextView  
+					    android:id="@+id/tvDayMonthYear"
+						android:layout_width="fill_parent" 
+						android:layout_height="wrap_content"
+						android:textColor="@color/white1"
+						android:textSize="15dp"
+						android:layout_centerVertical="true"
+						android:gravity="center"/>
+		
+   		 	    </RelativeLayout>
+				
+				<RelativeLayout
+			        android:layout_width="150dp"
+			        android:layout_height="66dp"
+			        android:orientation="horizontal"
+			        android:background="@drawable/schedule_day_panel_button_top"
+			        android:id="@+id/rlDayPanel2"
+			        android:layout_toRightOf="@+id/rlDayPanel1"
+			        android:layout_weight="1"
+			        android:gravity="center"
+			        android:padding="5dp" >
+   		 	        
+				    <ImageView
+				        android:id="@+id/ivFriendsThumb1"
+				        android:layout_width="30dp"
+				        android:layout_height="30dp"
+				        android:adjustViewBounds="true" 
+				        android:scaleType="centerCrop" />
+					
+					<ImageView
+				        android:id="@+id/ivFriendsThumb2"
+				        android:layout_width="30dp"
+				        android:layout_height="30dp"
+				        android:layout_marginLeft="3dp"
+				        android:adjustViewBounds="true" 
+				        android:scaleType="centerCrop"
+				        android:layout_toRightOf="@+id/ivFriendsThumb1" />
+					
+					<ImageView
+				        android:id="@+id/ivFriendsThumb3"
+				        android:layout_width="30dp"
+				        android:layout_height="30dp"
+				        android:layout_marginLeft="3dp"
+				        android:adjustViewBounds="true" 
+				        android:scaleType="centerCrop"
+				        android:layout_toRightOf="@+id/ivFriendsThumb2" />
+					
+					<ImageView
+				        android:id="@+id/ivFriendsThumb4"
+				        android:layout_width="37dp"
+				        android:layout_height="30dp"
+				        android:layout_centerHorizontal="true"
+				        android:adjustViewBounds="true" 
+				        android:scaleType="centerCrop"
+				        android:src="@drawable/friends_schedule_icon"
+				        android:visibility="gone" />
+				
+				    <TextView  
+					    android:id="@+id/tvFriendsSchedules"
+						android:layout_width="fill_parent" 
+						android:layout_height="wrap_content"
+						android:text="@string/Friends_Schedules"
+						android:textColor="@color/dimgrey3"
+						android:textSize="10dp"
+						android:layout_centerVertical="true"
+						android:gravity="center"
+						android:layout_below="@+id/ivFriendsThumb1"
+						android:layout_marginTop="5dp" />
+   		 	        
+				</RelativeLayout>
+		
+				<RelativeLayout
+			        android:layout_width="150dp"
+			        android:layout_height="66dp"
+			        android:orientation="horizontal"
+			        android:background="@drawable/schedule_day_panel_button_top"
+			        android:id="@+id/rlDayPanel3"
+			        android:layout_toRightOf="@+id/rlDayPanel2"
+			        android:layout_weight="1"
+			        android:gravity="center"
+			        android:padding="5dp" >
+				    
+				    <ImageView
+				        android:id="@+id/ivEventsThumb1"
+				        android:layout_width="30dp"
+				        android:layout_height="30dp"
+				        android:adjustViewBounds="true" 
+				        android:scaleType="centerCrop" />
+					
+					<ImageView
+				        android:id="@+id/ivEventsThumb2"
+				        android:layout_width="30dp"
+				        android:layout_height="30dp"
+				        android:layout_marginLeft="3dp"
+				        android:adjustViewBounds="true" 
+				        android:scaleType="centerCrop"
+				        android:layout_toRightOf="@+id/ivEventsThumb1" />
+					
+					<ImageView
+				        android:id="@+id/ivEventsThumb3"
+				        android:layout_width="30dp"
+				        android:layout_height="30dp"
+				        android:layout_marginLeft="3dp"
+				        android:adjustViewBounds="true" 
+				        android:scaleType="centerCrop"
+				        android:layout_toRightOf="@+id/ivEventsThumb2" />
+					
+				    <TextView  
+					    android:id="@+id/tvCampusEvents"
+						android:layout_width="fill_parent" 
+						android:layout_height="wrap_content"
+						android:text="@string/Campus_Events"
+						android:textColor="@color/dimgrey3"
+						android:textSize="10dp"
+						android:layout_centerVertical="true"
+						android:gravity="center"
+						android:layout_below="@+id/ivEventsThumb1"
+						android:layout_marginTop="5dp" />
+		
+				</RelativeLayout>
+
+			</LinearLayout>
+			
+</RelativeLayout>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>		
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:background="@color/white1" >
+
+		    <com.handmark.pulltorefresh.library.PullToRefreshListView
+		        android:id="@+id/lvFeaturedClubs"
+		        android:layout_width="fill_parent"
+		        android:layout_height="fill_parent"
+		        android:dividerHeight="0dp"
+				android:fadingEdge="none"
+				android:listSelector="@color/realtransparent"
+				android:scrollbarThumbVertical="@drawable/scrollbar_vertical_thumb"
+				android:layout_above="@+id/llBottomButtons"
+				android:scrollbars="none" /> 
+				
+		    <LinearLayout
+		        xmlns:android="http://schemas.android.com/apk/res/android"
+		        android:layout_width="fill_parent"
+		        android:layout_height="51dp"
+		        android:orientation="horizontal"
+		        android:gravity="center"
+		        android:background="@drawable/rounded_corner_row_bg3"
+		        android:id="@+id/llBottomButtons"
+		        android:padding="5dp"
+		        android:layout_alignParentBottom="true" >
+	
+		     	<Button
+		         	android:id="@+id/bViewMap"
+			        android:layout_width="fill_parent"
+			        android:layout_height="40dp"
+			        android:text="@string/Campus_Map"
+			        android:background="@drawable/campuswall_button_background"
+			        android:textColor="@color/dimgrey3"
+			        android:textSize="16dp"
+			        android:gravity="center" />
+		     </LinearLayout>
+     
+</RelativeLayout>

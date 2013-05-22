@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent" android:orientation="vertical"
+	android:layout_height="fill_parent">
+
+	<RelativeLayout
+		        xmlns:android="http://schemas.android.com/apk/res/android"
+		        android:layout_width="fill_parent"
+		        android:layout_height="50dp"
+		        android:orientation="horizontal"
+		        android:background="@drawable/header_slice"
+		        android:id="@+id/rlHeader"
+		        android:paddingTop="5dp"
+		        android:paddingLeft="5dp"
+		        android:paddingRight="5dp"
+		        android:paddingBottom="5dp" >
+		       
+				<TextView  
+				    android:id="@+id/header"
+					android:layout_width="200dp" 
+					android:layout_height="35dp"
+					android:text="@string/Sign_Up"
+					android:textColor="@color/white1"
+					android:textSize="16dp"
+					android:maxLines="1"
+					android:layout_centerInParent="true"
+					android:gravity="center"
+					android:shadowRadius="1"
+  					android:shadowDx="0"
+  					android:shadowDy="-2"
+  					android:shadowColor="@color/shadow_color" />
+				
+				<Button
+			        android:layout_width="54dp"
+			        android:layout_height="35dp"
+			        android:background="@drawable/button_back"
+			        android:id="@+id/back"
+			        android:layout_marginTop="2dp"
+			        android:layout_alignParentLeft="true" />
+				
+				<Button
+			        android:layout_width="54dp"
+			        android:layout_height="38dp"
+			        android:background="@drawable/compose_share_button_bg"
+			        android:id="@+id/bCreateAccount"
+			        android:text="@string/Done"
+		 			android:textSize="13dp"
+		 			android:textColor="@color/dimgrey3"
+					android:gravity="center"
+			        android:layout_marginTop="0dp"
+			        android:layout_alignParentRight="true" />
+
+			</RelativeLayout>
+
+	<ScrollView android:layout_width="fill_parent"
+		android:layout_height="fill_parent"
+		android:background="@color/white1"
+		android:scrollbarThumbVertical="@drawable/scrollbar_vertical_thumb" >
+		
+		<LinearLayout android:layout_width="fill_parent"
+			android:gravity="center_horizontal" android:orientation="vertical"
+			android:layout_height="wrap_content">
+			
+		    <TextView
+		        android:id="@+id/tvSchoolName"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:text="McGill University"
+		        android:textSize="18dp"
+		        android:layout_centerHorizontal="true"
+	  			android:layout_marginTop="10dp" />
+			
+		    <RelativeLayout
+		        android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:padding="10dp"
+				android:id="@+id/FacebookLoginBg"
+				android:layout_centerHorizontal="true"
+				android:layout_marginTop="10dp"
+				android:background="@android:drawable/editbox_background" >
+			
+		    <com.facebook.widget.LoginButton
+			    android:id="@+id/bLoginFacebook" 
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content" 
+				android:layout_centerHorizontal="true" />
+		    
+		    </RelativeLayout>
+		    
+		    <TextView
+			    android:id="@+id/tvOr"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:text="@string/Or_fill_in_your_information_below"
+		        android:textSize="15dp"
+		        android:layout_centerHorizontal="true"
+	  			android:layout_marginTop="10dp" />
+		    
+		    <LinearLayout android:layout_marginTop="10dp"
+				android:layout_width="260dp"
+				android:layout_height="50dp" android:background="@android:drawable/editbox_background"
+				android:paddingLeft="15dp" android:paddingRight="15dp"
+				android:gravity="center_vertical" >
+
+				<EditText android:id="@+id/etEmail" android:layout_width="230dp"
+					android:layout_height="40dp" android:background="@null"
+					android:hint="@string/Email" android:inputType="textCapSentences"
+					android:textColor="@color/grey1"
+					android:textSize="16dp"
+					android:focusable="true"
+   					android:focusableInTouchMode ="true" />
+			</LinearLayout>
+			
+		    <LinearLayout android:layout_marginTop="10dp"
+			 	android:layout_width="260dp"
+				android:layout_height="50dp" android:background="@android:drawable/editbox_background"
+				android:paddingLeft="15dp" android:paddingRight="15dp"
+				android:gravity="center_vertical">
+
+				<EditText android:id="@+id/etPassword" android:inputType="textPassword"
+					android:layout_width="230dp" 
+					android:layout_height="40dp"
+					android:hint="@string/Password" 
+					android:background="@null" 
+					android:textColor="@color/grey1"
+					android:textSize="16dp"
+					android:focusable="true"
+   					android:focusableInTouchMode ="true" />
+			</LinearLayout>
+
+			<LinearLayout android:layout_marginTop="10dp"
+				android:layout_width="260dp"
+				android:layout_height="50dp" android:background="@android:drawable/editbox_background"
+				android:paddingLeft="15dp" android:paddingRight="15dp"
+				android:gravity="center_vertical" >
+
+				<EditText android:id="@+id/etFirstName" android:layout_width="230dp"
+					android:layout_height="40dp" android:background="@null"
+					android:hint="@string/First_Name" android:inputType="textCapSentences"
+					android:textColor="@color/grey1"
+					android:textSize="16dp"
+					android:focusable="true"
+   					android:focusableInTouchMode ="true" />
+			</LinearLayout>
+
+			<LinearLayout android:layout_marginTop="10dp"
+				android:layout_width="260dp"
+				android:layout_height="50dp" android:background="@android:drawable/editbox_background"
+				android:paddingLeft="15dp" android:paddingRight="15dp"
+				android:gravity="center_vertical">
+
+				<EditText android:id="@+id/etLastName" android:layout_width="230dp"
+					android:layout_height="40dp" android:background="@null"
+					android:hint="@string/Last_Name" android:inputType="textCapSentences"
+					android:textColor="@color/grey1"
+					android:textSize="16dp"
+					android:focusable="true"
+   					android:focusableInTouchMode ="true" />
+			</LinearLayout>
+
+			<Button android:id="@+id/bGender"
+				android:layout_marginTop="10dp" 
+				android:layout_width="260dp" android:layout_height="50dp"
+				android:background="@android:drawable/editbox_background"
+				android:hint="@string/Gender"
+				android:textColor="@color/grey1"
+				android:textSize="16dp"
+				android:gravity="left|center_vertical"
+				android:paddingLeft="15dp" />
+
+			<Button 
+			    android:id="@+id/bBirthday" 
+			    android:layout_width="260dp"
+				android:layout_marginTop="10dp" 
+				android:layout_height="50dp" android:gravity="left|center_vertical"
+				android:hint="@string/Birthday"
+				android:textColor="@color/grey1"
+				android:textSize="16dp"
+				android:background="@android:drawable/editbox_background"
+				android:paddingLeft="15dp" />
+
+			<View android:layout_width="160dp" android:layout_height="1dp"
+				android:layout_marginTop="10dp" android:layout_marginBottom="10dp" />
+
+		</LinearLayout>
+	</ScrollView>
+
+</LinearLayout>

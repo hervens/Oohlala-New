@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="10dp"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:paddingBottom="10dp"
+    android:background="@drawable/listview_row_bg_state" >
+
+    <TextView
+        android:id="@+id/tvCourseCode"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textSize="18dp"
+        android:textColor="@color/black" />
+    
+    <TextView
+        android:id="@+id/tvCourseName"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textSize="12dp"
+        android:textColor="@color/dimgrey3"
+        android:layout_below="@+id/tvCourseCode" />
+    
+    <ImageView
+        android:id="@+id/ivSign"
+		android:layout_width="14dp"
+		android:layout_height="14dp"
+		android:layout_alignParentRight="true"
+		android:layout_centerVertical="true"
+		android:layout_marginRight="10dp"
+		android:adjustViewBounds="true" 
+		android:scaleType="centerCrop"
+		android:src="@drawable/plus_right" />
+    
+</RelativeLayout>

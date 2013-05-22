@@ -1,0 +1,43 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/popupLinearLayoutTab1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    
+     >
+
+                <LinearLayout
+                    android:id="@+id/tab1LinearLayout"
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:layout_height="wrap_content"
+                    android:padding="2dp" >
+                    
+                        <TextView
+        android:id="@+id/textTitleContents2"
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:layout_height="wrap_content"
+        android:text="INSide of TAb 1 TESTT Title"
+        android:textStyle="bold"
+        android:textColor="#ffffff"
+        android:background="#0969A2"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp" 
+        />         
+        
+        <TextView
+    android:id="@+id/textContents2"
+    android:layout_margin="8dp"
+    android:layout_width="match_parent"
+    android:layout_marginTop="5dp"
+    android:layout_height="wrap_content"
+    android:gravity="left"
+    android:text="INSide of TAb 1 TEST"
+    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                </LinearLayout>
+
+
+</RelativeLayout>

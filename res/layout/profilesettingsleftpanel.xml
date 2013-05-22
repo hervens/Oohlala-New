@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:background="@color/white1" >
+    
+    	<RelativeLayout
+		        xmlns:android="http://schemas.android.com/apk/res/android"
+		        android:layout_width="fill_parent"
+		        android:layout_height="50dp"
+		        android:orientation="horizontal"
+		        android:background="@drawable/header_slice"
+		        android:id="@+id/rlHeader"
+		        android:paddingTop="5dp"
+		        android:paddingLeft="5dp"
+		        android:paddingRight="5dp"
+		        android:paddingBottom="5dp" >
+		       
+				<TextView  
+				    android:id="@+id/header"
+					android:layout_width="200dp" 
+					android:layout_height="35dp"
+					android:text="@string/Settings"
+					android:textColor="@color/white1"
+					android:textSize="16dp"
+					android:maxLines="1"
+					android:layout_centerInParent="true"
+					android:gravity="center"
+					android:shadowRadius="1"
+  					android:shadowDx="0"
+  					android:shadowDy="-2"
+  					android:shadowColor="@color/shadow_color" />
+				
+				<com.gotoohlala.TopMenuNavbar  
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:id="@+id/bTopMenuNavBar"
+			        android:layout_marginTop="2dp"
+			        android:layout_alignParentLeft="true" />
+
+			</RelativeLayout>
+		
+    <RelativeLayout 
+	        android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:layout_below="@+id/rlHeader"
+			android:id="@+id/content" >
+		
+    <TextView
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:text="@string/Settings"
+	        android:textColor="@color/white1"
+	        android:textSize="13dp"
+	        android:padding="5dp"
+	        android:background="@drawable/textview"
+	        android:id="@+id/tvSettings"
+	        android:visibility="gone" />
+    
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvSettings"
+        android:scrollbarThumbVertical="@drawable/scrollbar_vertical_thumb" >
+
+        <LinearLayout
+            android:id="@+id/linearLayout1"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical"
+            android:padding="10dp" >
+
+            <Button
+                android:id="@+id/bModifyProfile"
+                android:layout_width="fill_parent"
+                android:layout_height="44dp"
+                android:background="@drawable/campuswall_button_background"
+                android:text="@string/Modify_Profile"
+                android:textColor="@color/dimgrey3" />
+		
+		    <Button
+		        android:id="@+id/bChangePassword"
+		        android:layout_width="fill_parent"
+		        android:layout_height="44dp"
+		        android:text="@string/Change_Password"
+		        android:background="@drawable/campuswall_button_background"
+		        android:layout_marginTop="10dp"
+		        android:textColor="@color/dimgrey3" />
+		
+		    <Button
+		        android:id="@+id/bBlockList"
+		       	android:layout_width="fill_parent"
+		        android:layout_height="44dp"
+		        android:text="@string/Block_List"
+		        android:background="@drawable/campuswall_button_background"
+		        android:layout_marginTop="10dp"
+		        android:textColor="@color/dimgrey3" />
+		
+		    <Button
+		        android:id="@+id/bWriteAReview"
+		        android:layout_width="fill_parent"
+		        android:layout_height="44dp"
+		        android:text="@string/Write_a_review"
+		        android:background="@drawable/campuswall_button_background"
+		        android:layout_marginTop="10dp"
+		        android:textColor="@color/dimgrey3" />
+		
+		    <Button
+		        android:id="@+id/bSendFeedback"
+		        android:layout_width="fill_parent"
+		        android:layout_height="44dp"
+		        android:text="@string/Send_Feedback"
+		        android:background="@drawable/campuswall_button_background"
+		        android:layout_marginTop="10dp"
+		        android:textColor="@color/dimgrey3" />
+		    
+		    <Button
+		        android:id="@+id/bLogout"
+		        android:layout_width="fill_parent"
+		        android:layout_height="44dp"
+		        android:text="@string/Logout"
+		        android:background="@drawable/campuswall_button_background"
+		        android:layout_marginTop="10dp"
+		        android:textColor="@color/dimgrey3" />
+            
+        </LinearLayout>
+    </ScrollView>
+    </RelativeLayout>
+
+</RelativeLayout>

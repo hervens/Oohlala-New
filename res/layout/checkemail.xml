@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:background="@drawable/checkemailbg"
+    android:id="@+id/bg" >
+
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"  
+	    android:layout_width="fill_parent"  
+	    android:layout_height="fill_parent"  
+	    android:orientation="vertical"
+	  	android:layout_above="@+id/bottom"
+	    android:id="@+id/flPage" >
+    
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_gravity="center"
+        android:fitsSystemWindows="true" />
+
+    	<RelativeLayout
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:orientation="vertical"
+	        android:layout_gravity="center" >
+
+        <LinearLayout
+            android:id="@+id/viewGroup"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="10dp"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:visibility="gone" >
+        </LinearLayout>
+    	</RelativeLayout>
+	</FrameLayout>
+		
+    
+        <LinearLayout
+            android:id="@+id/bottom"
+            android:layout_width="fill_parent"
+            android:layout_height="180dp"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical" >
+   
+            <RelativeLayout android:id="@+id/bCreateAccount"
+				android:background="@drawable/button_register"
+				android:clickable="true" android:layout_width="fill_parent"
+				android:layout_height="50dp" android:layout_below="@+id/etCheckEmail"
+				android:layout_marginLeft="10dp" 
+				android:layout_marginRight="10dp" 
+				android:gravity="center_vertical"
+				android:layout_gravity="center"
+				android:layout_marginTop="20dp" >
+        
+				<TextView android:id="@+id/joinCampus" 
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content" 
+					android:text="Create your Account"
+					android:textColor="#fff"
+					android:textStyle="bold"
+					android:textSize="18dp"
+					android:layout_centerInParent="true"
+					android:shadowRadius="1"
+		  			android:shadowDx="0"
+		  			android:shadowDy="-2"
+		  			android:shadowColor="@color/shadow_color" />
+				
+			</RelativeLayout>
+			
+            <RelativeLayout android:id="@+id/bLogin"
+				android:background="@drawable/button_login"
+				android:clickable="true" android:layout_width="fill_parent"
+				android:layout_height="45dp" android:layout_below="@+id/bCheckEmail"
+				android:layout_marginLeft="10dp" 
+				android:layout_marginRight="10dp" 
+				android:gravity="center_vertical"
+				android:layout_gravity="center"
+				android:layout_marginTop="5dp" >
+        
+				<TextView android:id="@+id/joinCampus" 
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content" 
+					android:text="Login to my Account"
+					android:textColor="#fff"
+					android:textStyle="bold"
+					android:textSize="15dp"
+					android:layout_centerInParent="true"
+					android:shadowRadius="1"
+		  			android:shadowDx="0"
+		  			android:shadowDy="-2"
+		  			android:shadowColor="@color/shadow_color" />
+				
+			</RelativeLayout>
+    		
+            <!-- 
+            <LinearLayout android:id="@+id/schoolLay"
+				android:layout_width="300dp" android:layout_height="100dp"
+				android:layout_gravity="center" android:layout_below="@+id/bCheckEmail"
+				android:background="@android:drawable/editbox_background">
+			<ListView android:id="@+id/school" android:layout_width="fill_parent"
+				android:layout_height="fill_parent" />
+
+
+			</LinearLayout>
+            -->
+            
+             <ListView 
+		        android:id="@+id/lvMultiSchools"
+			   	android:layout_width="fill_parent"
+				android:layout_height="fill_parent"
+				android:layout_below="@+id/bCheckEmail"
+				android:fadingEdge="none"
+	    		android:gravity="center"
+	    		android:layout_marginTop="20dp"
+	    		android:layout_marginBottom="20dp"
+	    		android:layout_marginLeft="20dp"
+	    		android:layout_marginRight="20dp"
+	    		android:background="@drawable/rounded_corner_checkemail_multischools"
+	    		android:cacheColorHint="@color/white1"
+	    		android:visibility="gone" >
+			</ListView>
+			  
+        </LinearLayout>
+   
+</RelativeLayout>

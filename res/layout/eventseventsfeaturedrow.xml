@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	    android:layout_width="fill_parent"
+	    android:layout_height="150dp"
+	    android:id="@+id/bg"
+	    android:background="@drawable/listview_row_bg_state" >  
+	    
+    <ImageView 
+	    android:layout_width="fill_parent"
+	    android:layout_height="150dp"
+	    android:id="@+id/bgFeaturedBlur"
+	    android:adjustViewBounds="true" 
+        android:scaleType="centerCrop" />  
+        
+    <ImageView 
+	    android:layout_width="fill_parent"
+	    android:layout_height="150dp"
+	    android:background="@drawable/overlay_featured"
+	    android:adjustViewBounds="true" 
+        android:scaleType="centerCrop" />  
+        
+    <View 
+        android:id="@+id/view"
+        android:layout_width="fill_parent"
+	    android:layout_height="70dp" />
+    
+    <View 
+        android:id="@+id/view2"
+        android:layout_width="fill_parent"
+	    android:layout_height="35dp"
+	    android:layout_below="@+id/view" />
+    
+    <ImageView
+        android:id="@+id/ivThumb"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_below="@+id/view"
+        android:adjustViewBounds="true" 
+        android:scaleType="centerCrop" />
+    
+    <ImageView
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_below="@+id/view"
+        android:adjustViewBounds="true" 
+        android:scaleType="centerCrop"
+        android:src="@drawable/avatarframe" />
+    
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="aa"
+        android:textColor="@color/white1"
+        android:textSize="15dp"
+        android:layout_toRightOf="@+id/ivThumb"
+        android:layout_above="@+id/startTime" >
+    </TextView>
+    
+   <TextView
+        android:id="@+id/startTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="aa"
+        android:textSize="13dp"
+        android:textColor="@color/white1"
+        android:layout_toRightOf="@+id/ivThumb"
+        android:layout_above="@+id/bAttending" >
+    </TextView>
+    
+   <Button
+       	android:id="@+id/bAttending"
+       	android:layout_width="125dp"
+  		android:layout_height="30dp"
+		android:text="10 Attending"
+		android:paddingLeft="20dp"
+        android:textSize="13dp"
+        android:textColor="@color/white1"
+        android:layout_toRightOf="@+id/ivThumb"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="10dp"
+        android:layout_below="@+id/view2"
+        android:background="@drawable/button_attending_featured" />
+   
+</RelativeLayout>

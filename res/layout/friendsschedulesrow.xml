@@ -1,0 +1,399 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:padding="10dp"
+	    android:id="@+id/bg"
+	    android:background="@drawable/listview_row_bg_state" >  
+    
+    <ImageView
+        android:id="@+id/ivThumb"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginRight="10dp"
+        android:adjustViewBounds="true" 
+        android:scaleType="centerCrop" />
+    
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginRight="10dp"
+        android:adjustViewBounds="true" 
+        android:scaleType="centerCrop"
+        android:src="@drawable/avatarframe" />
+    
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="aa"
+        android:textSize="16dp"
+        android:layout_toRightOf="@+id/ivThumb" />
+    
+    <ImageView
+        android:id="@+id/ivStatus"
+        android:layout_width="75dp"
+        android:layout_height="20dp"
+        android:adjustViewBounds="true" 
+        android:scaleType="centerCrop"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="30dp"
+        android:background="@drawable/label_busy" />
+    
+    <TextView
+        android:id="@+id/tvStatus"
+        android:layout_width="75dp"
+        android:layout_height="20dp"
+        android:text="@string/BUSY"
+        android:textSize="13dp"
+        android:textColor="@color/white1"
+        android:gravity="center"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="30dp" />
+    
+    <ImageView
+        android:id="@+id/ivScheduleBg"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:adjustViewBounds="true" 
+        android:scaleType="centerCrop"
+        android:layout_toRightOf="@+id/ivThumb"
+        android:layout_below="@+id/name"
+        android:src="@drawable/social_schedule_bg"
+        android:layout_marginRight="30dp" />
+    
+    <ImageView
+        android:id="@+id/ivBlock1"
+        android:layout_width="17dp"
+        android:layout_height="3dp"
+        android:layout_marginTop="13dp"
+        android:adjustViewBounds="true" 
+        android:scaleType="centerCrop"
+        android:layout_toRightOf="@+id/ivThumb"
+        android:layout_below="@+id/name"
+        android:background="@drawable/social_schedule_block" />
+    
+    <ImageView
+        android:id="@+id/ivBlock2"
+        android:layout_width="17dp"
+        android:layout_height="3dp"
+        android:layout_marginTop="13dp"
+        android:layout_marginLeft="2dp"
+        android:adjustViewBounds="true" 
+        android:scaleType="centerCrop"
+        android:layout_toRightOf="@+id/ivBlock1"
+        android:layout_below="@+id/name"
+        android:background="@drawable/social_schedule_block" />
+    
+    <ImageView
+        android:id="@+id/ivBlock3"
+        android:layout_width="18dp"
+        android:layout_height="3dp"
+        android:layout_marginTop="13dp"
+        android:layout_marginLeft="2dp"
+        android:adjustViewBounds="true" 
+        android:scaleType="centerCrop"
+        android:layout_toRightOf="@+id/ivBlock2"
+        android:layout_below="@+id/name"
+        android:background="@drawable/social_schedule_block" />
+    
+    <ImageView
+        android:id="@+id/ivBlock4"
+        android:layout_width="17dp"
+        android:layout_height="3dp"
+        android:layout_marginTop="13dp"
+        android:layout_marginLeft="2dp"
+        android:adjustViewBounds="true" 
+        android:scaleType="centerCrop"
+        android:layout_toRightOf="@+id/ivBlock3"
+        android:layout_below="@+id/name"
+        android:background="@drawable/social_schedule_block" />
+    
+    <ImageView
+        android:id="@+id/ivBlock5"
+        android:layout_width="17dp"
+        android:layout_height="3dp"
+        android:layout_marginTop="13dp"
+        android:layout_marginLeft="2dp"
+        android:adjustViewBounds="true" 
+        android:scaleType="centerCrop"
+        android:layout_toRightOf="@+id/ivBlock4"
+        android:layout_below="@+id/name"
+        android:background="@drawable/social_schedule_block" />
+    
+    <ImageView
+        android:id="@+id/ivBlock6"
+        android:layout_width="18dp"
+        android:layout_height="3dp"
+        android:layout_marginTop="13dp"
+        android:layout_marginLeft="2dp"
+        android:adjustViewBounds="true" 
+        android:scaleType="centerCrop"
+        android:layout_toRightOf="@+id/ivBlock5"
+        android:layout_below="@+id/name"
+        android:background="@drawable/social_schedule_block" />
+    
+    <ImageView
+        android:id="@+id/ivBlock7"
+        android:layout_width="17dp"
+        android:layout_height="3dp"
+        android:layout_marginTop="13dp"
+        android:layout_marginLeft="2dp"
+        android:adjustViewBounds="true" 
+        android:scaleType="centerCrop"
+        android:layout_toRightOf="@+id/ivBlock6"
+        android:layout_below="@+id/name"
+        android:background="@drawable/social_schedule_block" />
+    
+    <ImageView
+        android:id="@+id/ivBlock8"
+        android:layout_width="17dp"
+        android:layout_height="3dp"
+        android:layout_marginTop="13dp"
+        android:layout_marginLeft="2dp"
+        android:adjustViewBounds="true" 
+        android:scaleType="centerCrop"
+        android:layout_toRightOf="@+id/ivBlock7"
+        android:layout_below="@+id/name"
+        android:background="@drawable/social_schedule_block" />
+    
+    <ImageView
+        android:id="@+id/ivBlock9"
+        android:layout_width="18dp"
+        android:layout_height="3dp"
+        android:layout_marginTop="13dp"
+        android:layout_marginLeft="2dp"
+        android:adjustViewBounds="true" 
+        android:scaleType="centerCrop"
+        android:layout_toRightOf="@+id/ivBlock8"
+        android:layout_below="@+id/name"
+        android:background="@drawable/social_schedule_block" />
+    
+    <ImageView
+        android:id="@+id/ivBlock10"
+        android:layout_width="17dp"
+        android:layout_height="3dp"
+        android:layout_marginTop="13dp"
+        android:layout_marginLeft="2dp"
+        android:adjustViewBounds="true" 
+        android:scaleType="centerCrop"
+        android:layout_toRightOf="@+id/ivBlock9"
+        android:layout_below="@+id/name"
+        android:background="@drawable/social_schedule_block" />
+    
+    <ImageView
+        android:id="@+id/ivBlock11"
+        android:layout_width="17dp"
+        android:layout_height="3dp"
+        android:layout_marginTop="13dp"
+        android:layout_marginLeft="2dp"
+        android:adjustViewBounds="true" 
+        android:scaleType="centerCrop"
+        android:layout_toRightOf="@+id/ivBlock10"
+        android:layout_below="@+id/name"
+        android:background="@drawable/social_schedule_block" />
+    
+    <ImageView
+        android:id="@+id/ivBlock12"
+        android:layout_width="18dp"
+        android:layout_height="3dp"
+        android:layout_marginTop="13dp"
+        android:layout_marginLeft="2dp"
+        android:adjustViewBounds="true" 
+        android:scaleType="centerCrop"
+        android:layout_toRightOf="@+id/ivBlock11"
+        android:layout_below="@+id/name"
+        android:background="@drawable/social_schedule_block" />
+    
+    <ImageView
+        android:id="@+id/ivBlock13"
+        android:layout_width="17dp"
+        android:layout_height="3dp"
+        android:layout_marginTop="13dp"
+        android:layout_marginLeft="2dp"
+        android:adjustViewBounds="true" 
+        android:scaleType="centerCrop"
+        android:layout_toRightOf="@+id/ivBlock12"
+        android:layout_below="@+id/name"
+        android:background="@drawable/social_schedule_block" />
+    
+    <ImageView
+        android:id="@+id/ivTimeNow1"
+        android:layout_width="8dp"
+        android:layout_height="19dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="4dp"
+        android:adjustViewBounds="true" 
+        android:scaleType="centerCrop"
+        android:layout_toRightOf="@+id/ivThumb"
+        android:layout_below="@+id/name"
+        android:background="@drawable/social_schedule_now" />
+    
+    <ImageView
+        android:id="@+id/ivTimeNow2"
+        android:layout_width="8dp"
+        android:layout_height="19dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="11dp"
+        android:adjustViewBounds="true" 
+        android:scaleType="centerCrop"
+        android:layout_toRightOf="@+id/ivTimeNow1"
+        android:layout_below="@+id/name"
+        android:background="@drawable/social_schedule_now" />
+    
+    <ImageView
+        android:id="@+id/ivTimeNow3"
+        android:layout_width="8dp"
+        android:layout_height="19dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="12dp"
+        android:adjustViewBounds="true" 
+        android:scaleType="centerCrop"
+        android:layout_toRightOf="@+id/ivTimeNow2"
+        android:layout_below="@+id/name"
+        android:background="@drawable/social_schedule_now" />
+    
+    <ImageView
+        android:id="@+id/ivTimeNow4"
+        android:layout_width="8dp"
+        android:layout_height="19dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="12dp"
+        android:adjustViewBounds="true" 
+        android:scaleType="centerCrop"
+        android:layout_toRightOf="@+id/ivTimeNow3"
+        android:layout_below="@+id/name"
+        android:background="@drawable/social_schedule_now" />
+    
+    <ImageView
+        android:id="@+id/ivTimeNow5"
+        android:layout_width="8dp"
+        android:layout_height="19dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="11dp"
+        android:adjustViewBounds="true" 
+        android:scaleType="centerCrop"
+        android:layout_toRightOf="@+id/ivTimeNow4"
+        android:layout_below="@+id/name"
+        android:background="@drawable/social_schedule_now" />
+    
+    <ImageView
+        android:id="@+id/ivTimeNow6"
+        android:layout_width="8dp"
+        android:layout_height="19dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="11dp"
+        android:adjustViewBounds="true" 
+        android:scaleType="centerCrop"
+        android:layout_toRightOf="@+id/ivTimeNow5"
+        android:layout_below="@+id/name"
+        android:background="@drawable/social_schedule_now" />
+    
+    <ImageView
+        android:id="@+id/ivTimeNow7"
+        android:layout_width="8dp"
+        android:layout_height="19dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="12dp"
+        android:adjustViewBounds="true" 
+        android:scaleType="centerCrop"
+        android:layout_toRightOf="@+id/ivTimeNow6"
+        android:layout_below="@+id/name"
+        android:background="@drawable/social_schedule_now" />
+    
+    <ImageView
+        android:id="@+id/ivTimeNow8"
+        android:layout_width="8dp"
+        android:layout_height="19dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="11dp"
+        android:adjustViewBounds="true" 
+        android:scaleType="centerCrop"
+        android:layout_toRightOf="@+id/ivTimeNow7"
+        android:layout_below="@+id/name"
+        android:background="@drawable/social_schedule_now" />
+    
+    <ImageView
+        android:id="@+id/ivTimeNow9"
+        android:layout_width="8dp"
+        android:layout_height="19dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="11dp"
+        android:adjustViewBounds="true" 
+        android:scaleType="centerCrop"
+        android:layout_toRightOf="@+id/ivTimeNow8"
+        android:layout_below="@+id/name"
+        android:background="@drawable/social_schedule_now" />
+    
+    <ImageView
+        android:id="@+id/ivTimeNow10"
+        android:layout_width="8dp"
+        android:layout_height="19dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="12dp"
+        android:adjustViewBounds="true" 
+        android:scaleType="centerCrop"
+        android:layout_toRightOf="@+id/ivTimeNow9"
+        android:layout_below="@+id/name"
+        android:background="@drawable/social_schedule_now" />
+    
+    <ImageView
+        android:id="@+id/ivTimeNow11"
+        android:layout_width="8dp"
+        android:layout_height="19dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="11dp"
+        android:adjustViewBounds="true" 
+        android:scaleType="centerCrop"
+        android:layout_toRightOf="@+id/ivTimeNow10"
+        android:layout_below="@+id/name"
+        android:background="@drawable/social_schedule_now" />
+    
+    <ImageView
+        android:id="@+id/ivTimeNow12"
+        android:layout_width="8dp"
+        android:layout_height="19dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="11dp"
+        android:adjustViewBounds="true" 
+        android:scaleType="centerCrop"
+        android:layout_toRightOf="@+id/ivTimeNow11"
+        android:layout_below="@+id/name"
+        android:background="@drawable/social_schedule_now" />
+    
+    <ImageView
+        android:id="@+id/ivTimeNow13"
+        android:layout_width="8dp"
+        android:layout_height="19dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="11dp"
+        android:adjustViewBounds="true" 
+        android:scaleType="centerCrop"
+        android:layout_toRightOf="@+id/ivTimeNow12"
+        android:layout_below="@+id/name"
+        android:background="@drawable/social_schedule_now" />
+    
+   	<Button
+		android:id="@+id/bRequest"
+		android:layout_width="150dp"
+		android:layout_height="30dp"
+		android:text="@string/Request_Schedule"
+		android:background="@drawable/campuswall_button_background"
+		android:textColor="@color/dimgrey3"
+		android:textSize="14dp"
+		android:layout_toRightOf="@+id/ivThumb"
+        android:layout_below="@+id/name"
+        android:visibility="gone" />
+    
+   	<ImageView
+		android:layout_width="10dp"
+		android:layout_height="14dp"
+		android:layout_alignParentRight="true"
+		android:layout_centerVertical="true"
+		android:layout_marginRight="10dp"
+		android:adjustViewBounds="true" 
+		android:scaleType="centerCrop"
+		android:src="@drawable/list_pointer" />
+   
+</RelativeLayout>

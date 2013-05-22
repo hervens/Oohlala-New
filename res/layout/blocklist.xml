@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:background="@color/white1" >
+    
+   <RelativeLayout
+		        xmlns:android="http://schemas.android.com/apk/res/android"
+		        android:layout_width="fill_parent"
+		        android:layout_height="50dp"
+		        android:orientation="horizontal"
+		        android:background="@drawable/header_slice"
+		        android:id="@+id/rlHeader"
+		        android:paddingTop="5dp"
+		        android:paddingLeft="5dp"
+		        android:paddingRight="5dp"
+		        android:paddingBottom="5dp" >
+		       
+				<TextView  
+				    android:id="@+id/header"
+					android:layout_width="200dp" 
+					android:layout_height="35dp"
+					android:text="@string/BLOCK_LIST"
+					android:textColor="@color/white1"
+					android:textSize="16dp"
+					android:maxLines="1"
+					android:layout_centerInParent="true"
+					android:gravity="center"
+					android:shadowRadius="1"
+  					android:shadowDx="0"
+  					android:shadowDy="-2"
+  					android:shadowColor="@color/shadow_color" />
+				
+				<Button
+			        android:layout_width="54dp"
+			        android:layout_height="35dp"
+			        android:background="@drawable/button_back"
+			        android:id="@+id/back"
+			        android:layout_marginTop="2dp"
+			        android:layout_alignParentLeft="true" />
+
+			</RelativeLayout>
+		
+    <RelativeLayout 
+	        android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:layout_below="@+id/rlHeader"
+			android:id="@+id/content" >
+	
+    <TextView
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+	  	android:text="@string/Block_List"
+	 	android:textSize="13dp"
+	  	android:padding="5dp"
+	  	android:background="@drawable/textview"
+	  	android:textColor="@color/white1"
+	  	android:id="@+id/tvBlockList"
+	  	android:visibility="gone" />
+    
+    <com.handmark.pulltorefresh.library.PullToRefreshListView 
+        android:id="@+id/lvBlockList"
+	   	android:layout_width="fill_parent"
+		android:layout_height="fill_parent"
+		android:layout_below="@+id/tvBlockList"
+		android:fadingEdge="none"
+		android:scrollbarThumbVertical="@drawable/scrollbar_vertical_thumb"
+		android:scrollbars="none" />
+    
+    </RelativeLayout>
+
+</RelativeLayout>

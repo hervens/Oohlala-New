@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+    
+    <RelativeLayout
+		        android:layout_width="fill_parent"
+		        android:layout_height="90dp"
+		        android:orientation="horizontal"
+		        android:background="@color/black1"
+		        android:gravity="center"
+		        android:id="@+id/rlStudents" >
+		       
+				<TextView  
+				    android:id="@+id/tvStudents"
+					android:layout_width="285dp" 
+					android:layout_height="wrap_content"
+					android:text="@string/Students"
+					android:textColor="@color/dimgrey3"
+					android:textSize="15dp"
+					android:gravity="center"
+					android:layout_marginTop="10dp"
+					android:layout_marginBottom="10dp" />
+				
+				<ImageView
+			        android:id="@+id/ivStudentsThumb1"
+			        android:layout_width="35dp"
+			        android:layout_height="35dp"
+			        android:adjustViewBounds="true" 
+			        android:scaleType="centerCrop"
+			        android:layout_below="@+id/tvStudents" />
+				
+				<ImageView
+			        android:id="@+id/ivStudentsThumb2"
+			        android:layout_width="35dp"
+			        android:layout_height="35dp"
+			        android:layout_marginLeft="8dp"
+			        android:adjustViewBounds="true" 
+			        android:scaleType="centerCrop"
+			        android:layout_below="@+id/tvStudents"
+			        android:layout_toRightOf="@+id/ivStudentsThumb1" />
+				
+				<ImageView
+			        android:id="@+id/ivStudentsThumb3"
+			        android:layout_width="35dp"
+			        android:layout_height="35dp"
+			        android:layout_marginLeft="8dp"
+			        android:adjustViewBounds="true" 
+			        android:scaleType="centerCrop"
+			        android:layout_below="@+id/tvStudents"
+			        android:layout_toRightOf="@+id/ivStudentsThumb2" />
+				
+				<ImageView
+			        android:id="@+id/ivStudentsThumb4"
+			        android:layout_width="35dp"
+			        android:layout_height="35dp"
+			        android:layout_marginLeft="8dp"
+			        android:adjustViewBounds="true" 
+			        android:scaleType="centerCrop"
+			        android:layout_below="@+id/tvStudents"
+			        android:layout_toRightOf="@+id/ivStudentsThumb3" />
+				
+				<ImageView
+			        android:id="@+id/ivStudentsThumb5"
+			        android:layout_width="35dp"
+			        android:layout_height="35dp"
+			        android:layout_marginLeft="8dp"
+			        android:adjustViewBounds="true" 
+			        android:scaleType="centerCrop"
+			        android:layout_below="@+id/tvStudents"
+			        android:layout_toRightOf="@+id/ivStudentsThumb4" />
+
+		        <Button
+			        android:layout_width="70dp"
+			        android:layout_height="40dp"
+			        android:background="@drawable/button_students"
+			        android:id="@+id/bStudents"
+			        android:text="@string/more"
+			        android:textColor="@color/white1"
+			        android:paddingRight="13dp"
+			        android:paddingBottom="3dp"
+			        android:layout_marginLeft="8dp"
+			        android:layout_toRightOf="@+id/ivStudentsThumb5"
+			        android:layout_below="@+id/tvStudents"
+			        android:layout_marginBottom="10dp" />
+		        
+		        <RelativeLayout
+		            android:id="@+id/rlUserSearch"
+			        android:layout_width="fill_parent"
+			        android:layout_height="wrap_content"
+			        android:orientation="horizontal"
+			        android:paddingLeft="15dp"
+			        android:paddingRight="15dp"
+			        android:layout_centerInParent="true"
+			        android:visibility="gone" >
+			        
+		        <EditText android:id="@+id/etSearchUserName" android:layout_width="fill_parent"
+					android:layout_height="wrap_content" android:background="@drawable/search_field"
+					android:textSize="15dp"
+					android:hint="@string/Search_by_name"
+					android:inputType="textPersonName"
+					android:paddingLeft="35dp" android:paddingRight="10dp" />
+		        
+		        </RelativeLayout>
+				
+			</RelativeLayout>
+    
+   			<RelativeLayout
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        android:orientation="horizontal"
+		        android:background="@color/black1"
+		        android:gravity="center_horizontal"
+		        android:paddingBottom="5dp"
+		        android:id="@+id/rlToggle"
+		        android:layout_below="@+id/rlStudents" >
+		        
+		        <Button
+		            android:id="@+id/bToggleLeft"
+		            android:layout_width="wrap_content"
+		        	android:layout_height="wrap_content"
+		        	android:background="@drawable/toggle_left"
+		        	android:text="@string/NEWEST"
+		        	android:textSize="11dp"
+		        	android:textColor="@color/white1" />
+		        
+		         <Button
+		            android:id="@+id/bToggleRight"
+		            android:layout_width="wrap_content"
+		        	android:layout_height="wrap_content"
+		        	android:layout_toRightOf="@+id/bToggleLeft"
+		        	android:background="@drawable/toggle_right"
+		        	android:text="@string/MOST_LIKED"
+		        	android:textSize="11dp"
+		        	android:textColor="@color/white1" />
+		        
+		    </RelativeLayout>
+		    
+</RelativeLayout>

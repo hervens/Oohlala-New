@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:background="@drawable/bg_redeem_item" >
+    
+    <RelativeLayout
+		        xmlns:android="http://schemas.android.com/apk/res/android"
+		        android:layout_width="fill_parent"
+		        android:layout_height="50dp"
+		        android:orientation="horizontal"
+		        android:background="@drawable/header_slice"
+		        android:id="@+id/rlHeader"
+		        android:paddingTop="5dp"
+		        android:paddingLeft="5dp"
+		        android:paddingRight="5dp"
+		        android:paddingBottom="5dp" >
+		       
+				<TextView  
+				    android:id="@+id/header"
+					android:layout_width="200dp" 
+					android:layout_height="35dp"
+					android:text=""
+					android:textColor="@color/white1"
+					android:textSize="16dp"
+					android:maxLines="1"
+					android:layout_centerInParent="true"
+					android:gravity="center" />
+				
+				<Button
+			        android:layout_width="54dp"
+			        android:layout_height="35dp"
+			        android:background="@drawable/button_back"
+			        android:id="@+id/back"
+			        android:layout_marginTop="2dp"
+			        android:layout_alignParentLeft="true" />
+
+			</RelativeLayout>
+    
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:id="@+id/content1"
+	    android:layout_below="@+id/rlHeader" >
+	
+	    <ImageView
+	        android:id="@+id/ivThumb"
+	        android:layout_width="50dp"
+	        android:layout_height="50dp"
+	        android:layout_margin="10dp"
+	        android:adjustViewBounds="true" 
+	        android:scaleType="centerCrop" />
+		
+	    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:orientation="horizontal" >
+	    
+	    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:padding="5dp"
+		    android:orientation="vertical" >
+	    
+	    <TextView
+	        android:id="@+id/tvTitle"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="aaa"
+	        android:textSize="15dp" >
+	    </TextView>
+	    
+	    <TextView
+	        android:id="@+id/tvName"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="aaa"
+	        android:textSize="13dp" >
+	    </TextView>
+	    
+		</LinearLayout>
+		
+	    <TextView
+	        android:id="@+id/bStoreDetail"
+	        android:layout_width="40dp"
+	        android:layout_height="30dp"
+	        android:text=""
+	        android:textSize="13dp"
+	        android:layout_alignParentRight="true"
+	        android:layout_centerVertical="true"
+	        android:background="@drawable/btn_action_pointer" >
+	    </TextView>
+	    
+	    </RelativeLayout>
+	
+	</LinearLayout>
+		<View 
+	    android:id="@+id/divider" 
+	    android:layout_below="@+id/content1"
+        android:layout_width="230dp"
+		android:layout_centerHorizontal="true"
+		android:layout_height="1dp"
+		android:background="@drawable/divider_faded" />
+    
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        android:id="@+id/content2" 
+        android:layout_below="@+id/divider" >
+	    
+        <ImageView
+	        android:id="@+id/ivImage"
+	        android:layout_width="60dp"
+	        android:layout_height="60dp"
+	        android:layout_margin="10dp"
+	        android:adjustViewBounds="true" 
+	        android:scaleType="centerCrop" />
+
+        <Button
+            android:id="@+id/bUseReward"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:padding="10dp"
+            android:text="@string/Use_Reward"
+            android:textColor="@color/white1"
+           	android:background="@drawable/buttonlike" />
+        
+        <TextView
+	        android:id="@+id/tvExpiration"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="aaa"
+	        android:layout_below="@+id/bUseReward"
+	        android:layout_centerHorizontal="true"
+	        android:textSize="13dp"
+	        android:layout_marginTop="10dp"
+	        android:paddingBottom="5dp" >
+	    </TextView>
+	    
+        <View android:id="@+id/boarder" android:layout_width="fill_parent"
+				android:layout_height="10dp" android:layout_below="@+id/tvExpiration"
+				android:background="@drawable/divider_item" />
+    	<View android:layout_width="32dp" android:layout_height="18dp"
+				android:layout_alignBottom="@id/boarder" android:layout_marginLeft="30dp"
+				android:background="@drawable/pointer_up_big" />
+
+    </RelativeLayout>
+    
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/content3"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/bottom"
+        android:layout_below="@+id/content2"
+        android:background="@color/white1" >
+    	
+         <ScrollView
+            android:id="@+id/scrollView"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:scrollbarThumbVertical="@drawable/scrollbar_vertical_thumb" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent" >
+        
+		        <TextView
+			        android:id="@+id/tvDescription"
+			        android:layout_width="fill_parent"
+			        android:layout_height="wrap_content"
+			        android:text=""
+			        android:textSize="13dp"
+			        android:padding="10dp" >
+			    </TextView>
+			    
+		        </LinearLayout>
+
+        </ScrollView>
+	    
+        <View android:layout_width="fill_parent" android:layout_height="5dp"
+			android:layout_below="@+id/scrollView" android:background="@drawable/login_border_bottom" />
+
+    </RelativeLayout>
+    
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="44dp"
+       	android:gravity="center"
+       	android:id="@+id/bottom"
+       	android:padding="5dp"
+       	android:layout_alignParentBottom="true" >
+      
+        <Button
+            android:id="@+id/bLikeStore"
+            android:layout_width="75dp"
+            android:layout_height="33dp"
+            android:text="@string/Like"
+            android:background="@drawable/campuswall_button_background"
+            android:textColor="@color/dimgrey3" />
+        
+        <Button
+            android:id="@+id/bDislikeStore"
+            android:layout_width="75dp"
+            android:layout_height="33dp"
+            android:layout_toRightOf="@+id/bLikeStore"
+            android:text="@string/Dislike"
+            android:background="@drawable/campuswall_button_background"
+            android:textColor="@color/dimgrey3"
+            android:layout_marginLeft="5dp" />
+        
+        <Button
+            android:id="@+id/bShareStore"
+            android:layout_width="75dp"
+            android:layout_height="33dp"
+            android:layout_toRightOf="@+id/bDislikeStore"
+            android:text="@string/Share"
+            android:background="@drawable/campuswall_button_background"
+            android:textColor="@color/dimgrey3"
+            android:layout_marginLeft="5dp" />
+        
+        <Button
+            android:id="@+id/bReportStore"
+            android:layout_width="75dp"
+            android:layout_height="33dp"
+            android:layout_toRightOf="@+id/bShareStore"
+            android:text="@string/Report"
+            android:background="@drawable/campuswall_button_background"
+            android:textColor="@color/dimgrey3"
+            android:layout_marginLeft="5dp"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

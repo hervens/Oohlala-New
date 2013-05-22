@@ -1,0 +1,386 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:background="@color/white1" >
+    
+    		<RelativeLayout
+		        xmlns:android="http://schemas.android.com/apk/res/android"
+		        android:layout_width="fill_parent"
+		        android:layout_height="50dp"
+		        android:orientation="horizontal"
+		        android:background="@drawable/header_slice"
+		        android:id="@+id/rlHeader"
+		        android:paddingTop="5dp"
+		        android:paddingLeft="5dp"
+		        android:paddingRight="0dp"
+		        android:paddingBottom="5dp" >
+		       
+				<TextView  
+				    android:id="@+id/header"
+					android:layout_width="200dp" 
+					android:layout_height="35dp"
+					android:text=""
+					android:textColor="@color/white1"
+					android:textSize="16dp"
+					android:maxLines="1"
+					android:layout_centerInParent="true"
+					android:gravity="center" />
+				
+				<Button
+			        android:layout_width="54dp"
+			        android:layout_height="35dp"
+			        android:background="@drawable/button_back"
+			        android:id="@+id/back"
+			        android:layout_marginTop="2dp"
+			        android:layout_alignParentLeft="true" />
+				
+				<Button
+			        android:layout_width="69dp"
+			        android:layout_height="35dp"
+			        android:background="@drawable/button_fav"
+			        android:id="@+id/bFav"
+			        android:layout_marginTop="2dp"
+			        android:layout_alignParentRight="true" />
+
+			</RelativeLayout>
+	
+    <ScrollView
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent"
+	    android:layout_below="@+id/rlHeader"
+	    android:layout_above="@+id/mvEventsMap"
+	    android:fadingEdge="none"
+	    android:scrollbarThumbVertical="@drawable/scrollbar_vertical_thumb" >
+
+	    <LinearLayout
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:orientation="vertical" >
+    
+    <RelativeLayout 
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:id="@+id/content1"
+	    android:padding="10dp"
+	    android:background="@drawable/bg_redeem_item"
+	    android:gravity="center" >
+	
+	    <ImageView
+	        android:id="@+id/ivThumb"
+	        android:layout_width="70dp"
+	        android:layout_height="70dp"
+	        android:layout_marginRight="10dp"
+	        android:adjustViewBounds="true" 
+	        android:scaleType="centerCrop" />
+	    
+	    <ImageView
+	        android:layout_width="70dp"
+	        android:layout_height="70dp"
+	        android:layout_marginRight="10dp"
+	        android:adjustViewBounds="true" 
+	        android:scaleType="centerCrop"
+	        android:src="@drawable/avatarframe" />
+	    
+	    <TextView
+	        android:id="@+id/tvStoreName"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="aa"
+	        android:textSize="15dp"
+	        android:layout_marginTop="10dp"
+	        android:layout_toRightOf="@+id/ivThumb" />
+	     
+	    <Button
+            android:id="@+id/bCallStore"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:background="@drawable/button_store_call"
+           	android:layout_marginTop="10dp"
+           	android:layout_below="@+id/ivThumb" />
+        
+        <Button
+            android:id="@+id/bEmailStore"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:background="@drawable/button_store_email"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/ivThumb"
+            android:layout_toRightOf="@+id/bCallStore" />
+        
+        <Button
+            android:id="@+id/bWebsiteStore"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:background="@drawable/button_store_web"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/ivThumb"
+            android:layout_toRightOf="@+id/bEmailStore" />
+    	
+	</RelativeLayout>
+	
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        android:id="@+id/content2" 
+        android:layout_below="@+id/content1"
+        android:padding="10dp"
+        android:background="@drawable/listview_row_bg_state" >
+    
+        		<TextView
+        		    android:id="@+id/tvWhere"
+		            android:layout_width="80dp"
+		            android:layout_height="wrap_content"
+		            android:text="@string/Where"
+		            android:textSize="15dp"
+		            android:layout_marginRight="20dp"
+		            android:gravity="right" />
+    
+	            <TextView
+		            android:id="@+id/tvDirectionTo"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:text=""
+		            android:textSize="13dp"
+		            android:layout_toRightOf="@+id/tvWhere" />
+        
+      			 <TextView
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:text="@string/Get_Direction"
+		            android:textSize="13dp"
+		            android:layout_below="@+id/tvDirectionTo"
+		            android:layout_toRightOf="@+id/tvWhere" />
+      			 
+      			  <ImageView
+			        android:layout_width="10dp"
+			        android:layout_height="14dp"
+			        android:layout_alignParentRight="true"
+			        android:layout_centerVertical="true"
+			        android:layout_marginRight="10dp"
+			        android:adjustViewBounds="true" 
+			        android:scaleType="centerCrop"
+			        android:src="@drawable/list_pointer" />
+      			 
+    </RelativeLayout>
+      
+    <View 
+        android:id="@+id/divider1" 
+        android:layout_below="@+id/content2"
+        android:layout_width="230dp"
+		android:layout_gravity="center"
+		android:layout_height="1dp"
+		android:background="@drawable/divider_faded" />
+       
+      <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        android:id="@+id/content3" 
+        android:layout_below="@+id/divider1"
+        android:padding="10dp"
+        android:background="@drawable/listview_row_bg_state" >
+    
+        		<TextView
+        		    android:id="@+id/tvDetails"
+		            android:layout_width="80dp"
+		            android:layout_height="wrap_content"
+		            android:text="@string/Details"
+		            android:textSize="15dp"
+		            android:gravity="right"
+		            android:layout_marginRight="20dp" />
+    
+	            <TextView
+		            android:id="@+id/tvDescription"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:maxLines="3"
+		            android:text=""
+		            android:textSize="13dp"
+		            android:layout_toRightOf="@+id/tvDetails" />
+      			 
+      </RelativeLayout>
+      
+      <View 
+        android:id="@+id/divider2" 
+        android:layout_below="@+id/content3"
+        android:layout_width="230dp"
+		android:layout_gravity="center"
+		android:layout_height="1dp"
+		android:background="@drawable/divider_faded" />
+      
+      <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        android:id="@+id/content4" 
+        android:layout_below="@+id/divider2"
+        android:padding="10dp"
+        android:background="@drawable/listview_row_bg_state" >
+    
+        <TextView
+        	android:id="@+id/tvHour"
+		 	android:layout_width="80dp"
+			android:layout_height="wrap_content"
+			android:text="@string/Hours"
+			android:textSize="15dp"
+			android:gravity="right"
+		  	android:layout_marginRight="20dp" />
+    
+	 	<TextView
+			android:id="@+id/tvDay0"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+		  	android:text="@string/Monday_"
+		   	android:textSize="13dp"
+		  	android:layout_toRightOf="@+id/tvHour" />
+	            
+	  	<TextView
+	        android:id="@+id/tvOpentime0"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+		  	android:text=""
+		 	android:textSize="13dp"
+		   	android:layout_toRightOf="@+id/tvHour"
+		   	android:layout_below="@+id/tvDay0" />
+	  	
+	  	<TextView
+			android:id="@+id/tvDay1"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+		  	android:text="@string/Tuesday_"
+		   	android:textSize="13dp"
+		   	android:layout_marginTop="10dp"
+		  	android:layout_toRightOf="@+id/tvHour"
+		  	android:layout_below="@+id/tvOpentime0" />
+	            
+	  	<TextView
+	        android:id="@+id/tvOpentime1"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+		  	android:text=""
+		 	android:textSize="13dp"
+		   	android:layout_toRightOf="@+id/tvHour"
+		   	android:layout_below="@+id/tvDay1" />
+	  	
+	  	<TextView
+			android:id="@+id/tvDay2"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+		  	android:text="@string/Wednesday_"
+		   	android:textSize="13dp"
+		   	android:layout_marginTop="10dp"
+		  	android:layout_toRightOf="@+id/tvHour"
+		  	android:layout_below="@+id/tvOpentime1" />
+	            
+	  	<TextView
+	        android:id="@+id/tvOpentime2"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+		  	android:text=""
+		 	android:textSize="13dp"
+		   	android:layout_toRightOf="@+id/tvHour"
+		   	android:layout_below="@+id/tvDay2" />
+	  	
+	  	<TextView
+			android:id="@+id/tvDay3"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+		  	android:text="@string/Thursday_"
+		   	android:textSize="13dp"
+		   	android:layout_marginTop="10dp"
+		  	android:layout_toRightOf="@+id/tvHour"
+		  	android:layout_below="@+id/tvOpentime2" />
+	            
+	  	<TextView
+	        android:id="@+id/tvOpentime3"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+		  	android:text=""
+		 	android:textSize="13dp"
+		   	android:layout_toRightOf="@+id/tvHour"
+		   	android:layout_below="@+id/tvDay3" />
+	  	
+	  	<TextView
+			android:id="@+id/tvDay4"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+		  	android:text="@string/Friday_"
+		   	android:textSize="13dp"
+		   	android:layout_marginTop="10dp"
+		  	android:layout_toRightOf="@+id/tvHour"
+		  	android:layout_below="@+id/tvOpentime3" />
+	            
+	  	<TextView
+	        android:id="@+id/tvOpentime4"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+		  	android:text=""
+		 	android:textSize="13dp"
+		   	android:layout_toRightOf="@+id/tvHour"
+		   	android:layout_below="@+id/tvDay4" />
+	  	
+	  	<TextView
+			android:id="@+id/tvDay5"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+		  	android:text="@string/Saturday_"
+		   	android:textSize="13dp"
+		   	android:layout_marginTop="10dp"
+		  	android:layout_toRightOf="@+id/tvHour"
+		  	android:layout_below="@+id/tvOpentime4" />
+	            
+	  	<TextView
+	        android:id="@+id/tvOpentime5"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+		  	android:text=""
+		 	android:textSize="13dp"
+		   	android:layout_toRightOf="@+id/tvHour"
+		   	android:layout_below="@+id/tvDay5" />
+	  	
+	  	<TextView
+			android:id="@+id/tvDay6"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+		  	android:text="@string/Sunday_"
+		   	android:textSize="13dp"
+		   	android:layout_marginTop="10dp"
+		  	android:layout_toRightOf="@+id/tvHour"
+		  	android:layout_below="@+id/tvOpentime5" />
+	            
+	  	<TextView
+	        android:id="@+id/tvOpentime6"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+		  	android:text=""
+		 	android:textSize="13dp"
+		   	android:layout_toRightOf="@+id/tvHour"
+		   	android:layout_below="@+id/tvDay6" />
+      			 
+     </RelativeLayout>
+     
+     <View 
+        android:id="@+id/divider3" 
+        android:layout_below="@+id/content4"
+        android:layout_width="230dp"
+		android:layout_gravity="center"
+		android:layout_height="1dp"
+		android:background="@drawable/divider_faded" />
+
+    </LinearLayout>
+    </ScrollView>
+    
+     <com.google.android.maps.MapView
+        android:id="@+id/mvEventsMap"
+        android:layout_width="fill_parent"
+        android:layout_height="150dp"
+        android:apiKey="@string/apikey"
+        android:clickable="true"
+        android:enabled="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="5dp" />
+
+</RelativeLayout>

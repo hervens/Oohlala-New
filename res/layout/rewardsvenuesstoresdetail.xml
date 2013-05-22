@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:background="@drawable/bg_redeem_item" >
+    
+    <RelativeLayout
+		        xmlns:android="http://schemas.android.com/apk/res/android"
+		        android:layout_width="fill_parent"
+		        android:layout_height="50dp"
+		        android:orientation="horizontal"
+		        android:background="@drawable/header_slice"
+		        android:id="@+id/rlHeader"
+		        android:paddingTop="5dp"
+		        android:paddingLeft="5dp"
+		        android:paddingRight="5dp"
+		        android:paddingBottom="5dp" >
+		       
+				<TextView  
+				    android:id="@+id/header"
+					android:layout_width="200dp" 
+					android:layout_height="35dp"
+					android:text=""
+					android:textColor="@color/white1"
+					android:textSize="16dp"
+					android:maxLines="1"
+					android:layout_centerInParent="true"
+					android:gravity="center" />
+				
+				<Button
+			        android:layout_width="54dp"
+			        android:layout_height="35dp"
+			        android:background="@drawable/button_back"
+			        android:id="@+id/back"
+			        android:layout_marginTop="2dp"
+			        android:layout_alignParentLeft="true" />
+
+			</RelativeLayout>
+    
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_below="@+id/rlHeader"
+	    android:id="@+id/content1" >
+	
+	    <ImageView
+	        android:id="@+id/ivThumb"
+	        android:layout_width="50dp"
+	        android:layout_height="50dp"
+	        android:layout_margin="10dp"
+	        android:adjustViewBounds="true" 
+	        android:scaleType="centerCrop" />
+		
+	    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:orientation="horizontal"
+		    android:id="@+id/rlBeforeDescr"
+		    android:layout_toRightOf="@+id/ivThumb" >
+	    
+	    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+		    android:layout_width="fill_parent"
+		    android:layout_height="wrap_content"
+		    android:padding="5dp"
+		    android:orientation="vertical" >
+	    
+		    <TextView
+		        android:id="@+id/tvName"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:text=""
+		        android:textSize="15dp" >
+		    </TextView>
+		    
+		    <RelativeLayout 
+			    android:layout_width="fill_parent"
+			    android:layout_height="wrap_content"
+			    android:orientation="horizontal"
+			    android:layout_marginTop="20dp" >
+			    <TextView
+			        android:id="@+id/tvLocation"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:text=""
+			        android:textSize="12dp" >
+			    </TextView>
+		    
+		    	<Button
+			        android:id="@+id/bOpen"
+			        android:layout_width="50dp"
+			        android:layout_height="20dp"
+			        android:text="@string/open"
+			        android:textColor="@color/white1"
+			        android:textSize="12dp"
+			        android:background="@drawable/button3"
+			        android:layout_alignParentRight="true" />
+		    </RelativeLayout>
+		    
+		</LinearLayout>
+	    
+	    </RelativeLayout>
+	    
+	    <View android:id="@+id/boarder" android:layout_width="fill_parent"
+				android:layout_height="10dp" android:layout_below="@+id/rlBeforeDescr"
+				android:background="@drawable/divider_item" />
+    	<View android:layout_width="32dp" android:layout_height="18dp"
+				android:layout_alignBottom="@id/boarder" android:layout_marginLeft="30dp"
+				android:background="@drawable/pointer_up_big" />
+	
+	</RelativeLayout>
+    
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/white1"
+        android:id="@+id/content2"
+        android:layout_below="@+id/content1"
+        android:layout_above="@+id/map" >
+    	
+         <ScrollView
+            android:id="@+id/scrollView"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:scrollbarThumbVertical="@drawable/scrollbar_vertical_thumb" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent" >
+        
+		        <TextView
+			        android:id="@+id/tvDescription"
+			        android:layout_width="fill_parent"
+			        android:layout_height="wrap_content"
+			        android:text=""
+			        android:textSize="13dp"
+			        android:padding="10dp" >
+			    </TextView>
+			    
+		        </LinearLayout>
+
+        </ScrollView>
+        
+         <View android:layout_width="fill_parent" android:layout_height="5dp"
+			android:layout_below="@+id/scrollView" android:background="@drawable/login_border_bottom" />
+
+    </RelativeLayout>
+    
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    	android:layout_width="fill_parent"
+    	android:layout_height="150dp"
+	    android:id="@+id/map"
+	    android:layout_above="@+id/bottom" >
+        
+     <com.google.android.maps.MapView
+        android:id="@+id/mvStoresMap"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:apiKey="@string/apikey"
+        android:clickable="true"
+        android:enabled="true" />
+    
+    <TextView
+        android:id="@+id/tvDirectionTo"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:text=""
+	        android:textColor="@color/white1"
+	        android:textSize="13dp"
+	        android:padding="5dp"
+	        android:background="@drawable/textview" />
+    
+    </RelativeLayout>
+    
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="44dp"
+       	android:gravity="center"
+       	android:layout_alignParentBottom="true"
+		android:padding="5dp"
+		android:id="@+id/bottom" >
+      
+        <Button
+            android:id="@+id/bCallStore"
+            android:layout_width="100dp"
+            android:layout_height="33dp"
+            android:text="@string/Call"
+            android:background="@drawable/campuswall_button_background"
+            android:textColor="@color/dimgrey3" />
+        
+        <Button
+            android:id="@+id/bEmailStore"
+            android:layout_width="100dp"
+            android:layout_height="33dp"
+            android:layout_toRightOf="@+id/bCallStore"
+            android:text="@string/Email"
+            android:background="@drawable/campuswall_button_background"
+            android:textColor="@color/dimgrey3"
+            android:layout_marginLeft="5dp" />
+        
+        <Button
+            android:id="@+id/bWebsiteStore"
+            android:layout_width="100dp"
+            android:layout_height="33dp"
+            android:layout_toRightOf="@+id/bEmailStore"
+            android:text="@string/Website"
+            android:background="@drawable/campuswall_button_background"
+            android:textColor="@color/dimgrey3"
+            android:layout_marginLeft="5dp" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

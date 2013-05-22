@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:id="@+id/bg"
+	    android:background="@drawable/listview_row_bg_state"
+	    android:paddingBottom="10dp" >  
+	    
+    <TextView
+        android:id="@+id/tvGameCategory"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+	  	android:text=""
+	 	android:textSize="13dp"
+	  	android:padding="5dp"
+	  	android:background="@drawable/textview"
+	  	android:textColor="@color/white1"
+	  	android:gravity="center" />
+    
+    <ImageView
+        android:id="@+id/ivThumb"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginRight="10dp"
+        android:adjustViewBounds="true" 
+        android:scaleType="centerCrop"
+        android:layout_below="@+id/tvGameCategory"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp" />
+    
+    <ImageView
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginRight="10dp"
+        android:adjustViewBounds="true" 
+        android:scaleType="centerCrop"
+        android:src="@drawable/avatarframe"
+        android:layout_below="@+id/tvGameCategory"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp" />
+    
+    <TextView
+        android:id="@+id/tvGameName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="aa"
+        android:textColor="@color/blue0"
+        android:textSize="15dp"
+        android:layout_toRightOf="@+id/ivThumb"
+        android:layout_below="@+id/tvGameCategory"
+        android:layout_marginTop="10dp" />
+    
+   <TextView
+        android:id="@+id/tvEndTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="aa"
+        android:textSize="13dp"
+        android:textColor="@color/dimgrey3"
+        android:layout_toRightOf="@+id/ivThumb"
+        android:layout_below="@+id/tvGameName" >
+    </TextView>
+    
+   <Button
+       	android:id="@+id/bPlaying"
+       	android:layout_width="125dp"
+  		android:layout_height="30dp"
+		android:text="10 Playing"
+		android:paddingLeft="20dp"
+        android:textSize="13dp"
+        android:textColor="@color/dimgrey3"
+        android:layout_toRightOf="@+id/ivThumb"
+        android:layout_below="@+id/tvEndTime"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/button_attending" />
+   
+   <ImageView
+        android:id="@+id/ivFirstPlace"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:adjustViewBounds="true" 
+        android:scaleType="centerCrop"
+        android:layout_toRightOf="@+id/ivThumb"
+        android:layout_below="@+id/tvEndTime"
+        android:layout_marginTop="5dp" />
+   
+   <ImageView
+        android:id="@+id/ivSecondPlace"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:adjustViewBounds="true" 
+        android:scaleType="centerCrop"
+        android:layout_toRightOf="@+id/ivFirstPlace"
+        android:layout_below="@+id/tvEndTime"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="10dp" />
+   
+   <ImageView
+        android:id="@+id/ivThirdPlace"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:adjustViewBounds="true" 
+        android:scaleType="centerCrop"
+        android:layout_toRightOf="@+id/ivSecondPlace"
+        android:layout_below="@+id/tvEndTime"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="10dp" />
+   
+   <ImageView
+        android:id="@+id/ivForthPlace"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:adjustViewBounds="true" 
+        android:scaleType="centerCrop"
+        android:layout_toRightOf="@+id/ivThirdPlace"
+        android:layout_below="@+id/tvEndTime"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="10dp" />
+   
+   <ImageView
+        android:id="@+id/ivFifthPlace"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:adjustViewBounds="true" 
+        android:scaleType="centerCrop"
+        android:layout_toRightOf="@+id/ivForthPlace"
+        android:layout_below="@+id/tvEndTime"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="10dp" />
+   
+   <ImageView
+		android:layout_width="10dp"
+		android:layout_height="14dp"
+		android:layout_alignParentRight="true"
+		android:layout_below="@+id/tvGameCategory"
+		android:layout_marginRight="10dp"
+		android:layout_marginTop="38dp"
+		android:adjustViewBounds="true" 
+		android:scaleType="centerCrop"
+		android:src="@drawable/list_pointer" />
+   
+</RelativeLayout>

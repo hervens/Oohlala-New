@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="3dp"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:paddingBottom="10dp"
+    android:background="@drawable/listview_row_bg_state" >
+    
+    <ImageView
+        android:id="@+id/ivThumb"
+        android:layout_width="50dp"
+        android:layout_height="57dp"
+        android:layout_marginRight="10dp"
+        android:adjustViewBounds="true" 
+        android:scaleType="centerCrop"
+        android:src="@drawable/campus_placeholder" />
+
+    <TextView
+        android:id="@+id/tvLocationName"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Gym"
+        android:textSize="18dp"
+        android:layout_centerVertical="true"
+        android:textColor="@color/black"
+        android:layout_toRightOf="@+id/ivThumb" />
+    
+</RelativeLayout>

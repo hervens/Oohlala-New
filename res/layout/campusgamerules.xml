@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:background="@color/white1" >
+   		
+	<RelativeLayout
+		        xmlns:android="http://schemas.android.com/apk/res/android"
+		        android:layout_width="fill_parent"
+		        android:layout_height="50dp"
+		        android:orientation="horizontal"
+		        android:background="@drawable/header_slice"
+		        android:id="@+id/rlHeader"
+		        android:paddingTop="5dp"
+		        android:paddingLeft="5dp"
+		        android:paddingRight="5dp"
+		        android:paddingBottom="5dp" >
+		       
+				<TextView  
+				    android:id="@+id/header"
+					android:layout_width="200dp" 
+					android:layout_height="35dp"
+					android:text=""
+					android:textColor="@color/white1"
+					android:textSize="16dp"
+					android:maxLines="1"
+					android:layout_centerInParent="true"
+					android:gravity="center" />
+				
+				<Button
+			        android:layout_width="54dp"
+			        android:layout_height="35dp"
+			        android:background="@drawable/button_back"
+			        android:id="@+id/back"
+			        android:layout_marginTop="2dp"
+			        android:layout_alignParentLeft="true" />
+
+			</RelativeLayout>	
+    
+    	<ScrollView
+            android:id="@+id/scrollView"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_below="@+id/rlHeader"
+			android:background="@color/brown2"
+			android:scrollbarThumbVertical="@drawable/scrollbar_vertical_thumb"  >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical" >"
+					
+    			<TextView
+			        android:id="@+id/tvGameName"
+			        android:layout_width="fill_parent"
+			        android:layout_height="wrap_content"
+			        android:text="Rules"
+			        android:textSize="20dp"
+			        android:padding="10dp" >
+			    </TextView>
+    			 
+    			 <TextView
+			        android:id="@+id/tvGameRules"
+			        android:layout_width="fill_parent"
+			        android:layout_height="wrap_content"
+			        android:text=""
+			        android:textSize="14dp"
+			        android:padding="10dp" >
+			    </TextView>
+			    
+    			 <Button
+		            android:id="@+id/bAgree"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_gravity="center"
+		            android:layout_marginTop="10dp"
+		            android:layout_marginBottom="10dp"
+		            android:text="@string/I_agree"
+		            android:textColor="@color/white1"
+		            android:padding="10dp"
+		            android:background="@drawable/buttonlike" />
+    
+   	 	</LinearLayout>
+	</ScrollView>
+
+</RelativeLayout>

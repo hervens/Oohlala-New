@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:background="@color/brown2" >
+    		
+    		<RelativeLayout
+		        xmlns:android="http://schemas.android.com/apk/res/android"
+		        android:layout_width="fill_parent"
+		        android:layout_height="50dp"
+		        android:orientation="horizontal"
+		        android:background="@drawable/header_slice"
+		        android:id="@+id/rlHeader"
+		        android:paddingTop="5dp"
+		        android:paddingLeft="5dp"
+		        android:paddingRight="5dp"
+		        android:paddingBottom="5dp" >
+		       
+				<TextView  
+				    android:id="@+id/header"
+					android:layout_width="200dp" 
+					android:layout_height="35dp"
+					android:text="@string/Add_Friend"
+					android:textColor="@color/white1"
+					android:textSize="16dp"
+					android:maxLines="1"
+					android:layout_centerInParent="true"
+					android:gravity="center"
+					android:shadowRadius="1"
+  					android:shadowDx="0"
+  					android:shadowDy="-2"
+  					android:shadowColor="@color/shadow_color" />
+				
+				<Button
+			        android:layout_width="54dp"
+			        android:layout_height="35dp"
+			        android:background="@drawable/button_back"
+			        android:id="@+id/back"
+			        android:layout_marginTop="2dp"
+			        android:layout_alignParentLeft="true" />
+				
+				<Button
+			        android:layout_width="54dp"
+			        android:layout_height="38dp"
+			        android:id="@+id/bInvite"
+			        android:text="@string/Invite"
+		 			android:textSize="13dp"
+		 			android:textColor="@color/dimgrey3"
+					android:gravity="center"
+			        android:layout_marginTop="0dp"
+			        android:layout_alignParentRight="true"
+			        android:background="@drawable/compose_share_button_bg" />
+
+			</RelativeLayout>
+			
+		    <LinearLayout 
+		        android:id="@+id/llSearchFriend"
+		        android:layout_width="fill_parent"
+				android:layout_height="50dp" android:background="@drawable/explore_search2"
+				android:paddingLeft="35dp" android:paddingRight="10dp"
+				android:gravity="center_vertical"
+				android:layout_below="@+id/rlHeader" >
+
+				<EditText android:id="@+id/etSearchFriend" android:layout_width="fill_parent"
+					android:layout_height="wrap_content" android:background="@null"
+					android:textSize="15dp"
+					android:hint="@string/Search_by_name"
+					android:inputType="textPersonName" />
+				
+			</LinearLayout>
+			
+		    <TextView
+		        android:id="@+id/tvSearchResult"
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        android:gravity="center"
+		        android:text=""
+        		android:paddingTop="5dp"
+        		android:paddingBottom="5dp"
+        		android:layout_below="@+id/llSearchFriend" />
+		    
+		    <View 
+			    android:id="@+id/divider" 
+			    android:layout_below="@+id/tvSearchResult"
+		        android:layout_width="230dp"
+				android:layout_centerHorizontal="true"
+				android:layout_height="1dp"
+				android:background="@drawable/divider_faded" />
+		    
+		    <ListView
+		        android:id="@+id/lvSearchFriend"
+		        android:layout_width="fill_parent"
+		        android:layout_height="fill_parent"
+		        android:layout_below="@+id/divider"
+		        android:fadingEdge="none"
+		        android:scrollbarThumbVertical="@drawable/scrollbar_vertical_thumb" >
+		    </ListView>
+	
+</RelativeLayout>

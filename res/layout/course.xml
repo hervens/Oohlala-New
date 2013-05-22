@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="utf-8"?>		
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+    
+    <RelativeLayout
+		        xmlns:android="http://schemas.android.com/apk/res/android"
+		        android:layout_width="fill_parent"
+		        android:layout_height="50dp"
+		        android:orientation="horizontal"
+		        android:background="@drawable/header_slice"
+		        android:id="@+id/rlHeader"
+		        android:paddingTop="5dp"
+		        android:paddingLeft="5dp"
+		        android:paddingRight="5dp"
+		        android:paddingBottom="5dp" >
+		       
+				<TextView  
+				    android:id="@+id/header"
+					android:layout_width="200dp" 
+					android:layout_height="35dp"
+					android:text=""
+					android:textColor="@color/white1"
+					android:textSize="16dp"
+					android:maxLines="1"
+					android:layout_centerInParent="true"
+					android:gravity="center"
+					android:shadowRadius="1"
+  					android:shadowDx="0"
+  					android:shadowDy="-2"
+  					android:shadowColor="@color/shadow_color" />
+				
+				<Button
+			        android:layout_width="54dp"
+			        android:layout_height="35dp"
+			        android:background="@drawable/button_back"
+			        android:id="@+id/back"
+			        android:layout_marginTop="2dp"
+			        android:layout_alignParentLeft="true" />
+
+			</RelativeLayout>
+	
+    <RelativeLayout 
+		android:layout_width="fill_parent"
+		android:layout_height="fill_parent"
+		android:layout_below="@+id/rlHeader"
+		android:padding="10dp" >
+		
+        <RelativeLayout 
+			android:layout_width="fill_parent"
+			android:layout_height="60dp"
+			android:id="@+id/rlCourseCode" >
+				
+        <ImageView
+	        android:id="@+id/ivCourseCodeBg"
+	        android:layout_width="fill_parent"
+	        android:layout_height="60dp"
+	        android:adjustViewBounds="true" 
+	        android:scaleType="centerCrop"
+	        android:background="@drawable/edit_row" />
+        
+         <TextView
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="@string/Course_Code"
+	        android:textSize="15dp"
+	        android:textColor="@color/dimgrey3"
+	        android:layout_centerVertical="true"
+	        android:layout_marginLeft="25dp" />
+         
+         <TextView
+	        android:id="@+id/tvCourseCode"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="Course Code"
+	        android:textSize="18dp"
+	        android:textColor="@color/black1"
+	        android:layout_centerVertical="true"
+	        android:layout_alignParentRight="true"
+	        android:layout_marginRight="25dp" />
+        
+        </RelativeLayout>
+	
+     <LinearLayout 
+	    android:layout_width="fill_parent"
+	    android:layout_height="100dp"
+	    android:id="@+id/weekday"
+	    android:background="@drawable/weekday_select"
+	    android:layout_below="@+id/rlCourseCode"
+	    android:layout_marginTop="10dp" >
+		
+        <TextView
+            android:id="@+id/bDayBg0"
+            android:layout_width="45dp"
+            android:layout_height="53dp"
+            android:layout_weight="1"
+            android:text="S"
+            android:textColor="@color/black1"
+            android:textSize="15dp"
+            android:gravity="center"
+            android:layout_marginTop="42dp" />
+        
+        <TextView
+            android:id="@+id/bDayBg1"
+            android:layout_width="45dp"
+            android:layout_height="53dp"
+            android:layout_weight="1"
+            android:text="M"
+            android:textColor="@color/black1"
+            android:textSize="15dp"
+            android:gravity="center"
+            android:layout_marginTop="42dp" />
+        
+        <TextView
+            android:id="@+id/bDayBg2"
+            android:layout_width="45dp"
+            android:layout_height="53dp"
+            android:layout_weight="1"
+            android:text="T"
+            android:textColor="@color/black1"
+            android:textSize="15dp"
+           	android:gravity="center"
+            android:layout_marginTop="42dp" />
+        
+     	<TextView
+            android:id="@+id/bDayBg3"
+            android:layout_width="45dp"
+            android:layout_height="53dp"
+            android:layout_weight="1"
+            android:text="W"
+            android:textColor="@color/black1"
+            android:textSize="15dp"
+            android:gravity="center"
+            android:layout_marginTop="42dp" />
+         
+    	<TextView
+            android:id="@+id/bDayBg4"
+            android:layout_width="45dp"
+            android:layout_height="53dp"
+            android:layout_weight="1"
+            android:text="T"
+            android:textColor="@color/black1"
+            android:textSize="15dp"
+            android:gravity="center"
+            android:layout_marginTop="42dp" />
+          
+      	<TextView
+            android:id="@+id/bDayBg5"
+            android:layout_width="45dp"
+            android:layout_height="53dp"
+            android:layout_weight="1"
+            android:text="F"
+            android:textColor="@color/black1"
+            android:textSize="15dp"
+            android:gravity="center"
+            android:layout_marginTop="42dp" />
+      	
+      	<TextView
+            android:id="@+id/bDayBg6"
+            android:layout_width="45dp"
+            android:layout_height="53dp"
+            android:layout_weight="1"
+            android:text="S"
+            android:textColor="@color/black1"
+            android:textSize="15dp"
+            android:gravity="center"
+            android:layout_marginTop="42dp" />
+        
+   	</LinearLayout>
+   	
+      <LinearLayout 
+	    android:layout_width="fill_parent"
+	    android:layout_height="100dp"
+	    android:layout_below="@+id/rlCourseCode"
+	    android:layout_marginTop="10dp" >
+		
+        <TextView
+            android:id="@+id/tvDay0"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_weight="1"        
+            android:layout_marginTop="46dp"
+            android:text="S"
+            android:textColor="@color/realtransparent"
+            android:textSize="15dp"
+            android:gravity="center"
+            android:background="@color/realtransparent" />
+        
+        <TextView
+            android:id="@+id/tvDay1"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_weight="1"
+            android:text="M"
+            android:textColor="@color/realtransparent"
+            android:textSize="15dp"
+            android:gravity="center"
+            android:layout_marginTop="46dp"
+            android:background="@color/realtransparent" />
+        
+        <TextView
+            android:id="@+id/tvDay2"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_weight="1"
+            android:text="T"
+            android:textColor="@color/realtransparent"
+            android:textSize="15dp"
+           	android:gravity="center"
+            android:layout_marginTop="46dp"
+            android:background="@color/realtransparent" />
+        
+     	<TextView
+            android:id="@+id/tvDay3"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_weight="1"
+            android:text="W"
+            android:textColor="@color/realtransparent"
+            android:textSize="15dp"
+            android:gravity="center"
+            android:layout_marginTop="46dp"
+            android:background="@color/realtransparent" />
+         
+    	<TextView
+            android:id="@+id/tvDay4"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_weight="1"
+            android:text="T"
+            android:textColor="@color/realtransparent"
+            android:textSize="15dp"
+            android:gravity="center"
+            android:layout_marginTop="46dp"
+            android:background="@color/realtransparent" />
+          
+      	<TextView
+            android:id="@+id/tvDay5"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_weight="1"
+            android:text="F"
+            android:textColor="@color/realtransparent"
+            android:textSize="15dp"
+            android:gravity="center"
+            android:layout_marginTop="46dp"
+            android:background="@color/realtransparent" />
+      	
+      	<TextView
+            android:id="@+id/tvDay6"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_weight="1"
+            android:text="S"
+            android:textColor="@color/realtransparent"
+            android:textSize="15dp"
+            android:gravity="center"
+            android:layout_marginTop="46dp"
+            android:background="@color/realtransparent" />
+        
+   	</LinearLayout>
+   
+     <TextView
+	   		android:layout_width="fill_parent"
+			android:layout_height="40dp"
+			android:text="@string/Class_Times"
+			android:textSize="15dp"
+			android:textColor="@color/dimgrey3"
+			android:gravity="center"
+			android:layout_marginTop="70dp" />
+
+		    <ListView
+		        android:id="@+id/lvCourse"
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        android:dividerHeight="0dp"
+				android:fadingEdge="none"
+				android:listSelector="@color/realtransparent"
+				android:scrollbarThumbVertical="@drawable/scrollbar_vertical_thumb"
+				android:layout_below="@+id/weekday"
+				android:layout_marginTop="-5dp" /> 
+				
+		   	<RelativeLayout 
+				android:layout_width="fill_parent"
+				android:layout_height="60dp"
+				android:id="@+id/rlAddClass"
+				android:layout_below="@+id/lvCourse" >
+				
+		        <ImageView
+			        android:layout_width="fill_parent"
+			        android:layout_height="60dp"
+			        android:adjustViewBounds="true" 
+			        android:scaleType="centerCrop"
+			        android:background="@drawable/edit_row_bottom" />
+		        
+		         <TextView
+		            android:id="@+id/tvAddClass"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:text=""
+			        android:textSize="15dp"
+			        android:textColor="@color/dimgrey3"
+			        android:layout_centerVertical="true"
+			        android:layout_marginLeft="25dp" />
+		         
+		         <ImageView
+			        android:layout_width="14dp"
+			        android:layout_height="14dp"
+			        android:layout_alignParentRight="true"
+			        android:layout_centerVertical="true"
+			        android:layout_marginRight="20dp"
+			        android:adjustViewBounds="true" 
+			        android:scaleType="centerCrop"
+			        android:src="@drawable/plus_right" />
+        
+        	</RelativeLayout>
+        	
+		   	<RelativeLayout 
+				android:layout_width="fill_parent"
+				android:layout_height="60dp"
+				android:id="@+id/rlShareClass"
+				android:layout_below="@+id/rlAddClass"
+				android:layout_marginTop="10dp"
+				android:visibility="gone" >
+				
+		        <ImageView
+			        android:layout_width="fill_parent"
+			        android:layout_height="60dp"
+			        android:adjustViewBounds="true" 
+			        android:scaleType="centerCrop"
+			        android:background="@drawable/edit_row" />
+		        
+		         <TextView
+		            android:id="@+id/tvShareClass"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:text="@string/Share_Class_with_friends"
+			        android:textSize="15dp"
+			        android:textColor="@color/dimgrey3"
+			        android:layout_centerVertical="true"
+			        android:layout_marginLeft="25dp" />
+        
+        	</RelativeLayout>
+				
+	</RelativeLayout>
+
+</RelativeLayout>

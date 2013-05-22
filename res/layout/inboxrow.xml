@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingBottom="5dp"
+    android:background="@drawable/listview_row_bg_state" >
+    
+    <TextView
+        android:id="@+id/tvInboxCategory"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+	  	android:text=""
+	 	android:textSize="13dp"
+	  	android:padding="5dp"
+	  	android:background="@drawable/textview"
+	  	android:textColor="@color/white1"
+	  	android:gravity="center" />
+
+    <ImageView
+        android:id="@+id/ivThumb"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="10dp"
+        android:adjustViewBounds="true" 
+        android:scaleType="centerCrop"
+        android:layout_below="@+id/tvInboxCategory" >
+    </ImageView>
+    
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="10dp"
+        android:adjustViewBounds="true" 
+        android:scaleType="centerCrop"
+        android:src="@drawable/avatarframe"
+        android:layout_below="@+id/tvInboxCategory" >
+    </ImageView>
+	    	
+	 		<TextView
+		        android:id="@+id/tvUserName"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:text="James"
+		        android:textColor="@color/blue0"
+		        android:textSize="16dp"
+		        android:layout_marginTop="3dp"
+		        android:layout_toRightOf="@+id/ivThumb"
+		        android:layout_below="@+id/tvInboxCategory" />
+    		
+	    	<TextView
+		        android:id="@+id/tvLastMsg"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:text="hi there"
+		        android:textColor="@color/black"
+		        android:textSize="12dp"
+		        android:maxLines="1"
+		        android:layout_marginTop="0dp"
+		        android:layout_toRightOf="@+id/ivThumb"
+		    	android:layout_below="@+id/tvUserName" />
+	    	
+	    	<TextView
+        		android:id="@+id/tvTime"
+        		android:layout_width="wrap_content"
+        		android:layout_height="wrap_content"
+        		android:text="Saturday"
+        		android:textColor="@color/black"
+        		android:textSize="12dp"
+		        android:layout_marginTop="0dp"
+		        android:layout_toRightOf="@+id/ivThumb"
+		    	android:layout_below="@+id/tvLastMsg" />
+    	
+    		<TextView
+        		android:id="@+id/tvUnreadMsg"
+        		android:layout_width="wrap_content"
+        		android:layout_height="wrap_content"
+        		android:text=""
+        		android:textColor="@color/white1"
+        		android:textSize="10dp"
+        		android:layout_alignParentRight="true"
+        		android:layout_below="@+id/tvInboxCategory"
+        		android:layout_marginTop="20dp"
+		    	android:layout_marginRight="30dp" />
+    		
+    <ImageView
+		android:layout_width="10dp"
+		android:layout_height="14dp"
+		android:layout_alignParentRight="true"
+		android:layout_below="@+id/tvInboxCategory"
+		android:layout_marginRight="10dp"
+		android:layout_marginTop="23dp"
+		android:adjustViewBounds="true" 
+		android:scaleType="centerCrop"
+		android:src="@drawable/list_pointer" />		
+	 
+</RelativeLayout>

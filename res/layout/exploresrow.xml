@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:padding="10dp"
+	    android:id="@+id/bg"
+	    android:background="@drawable/listview_row_bg_state" >  
+    
+    <ImageView
+        android:id="@+id/ivThumb"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginRight="10dp"
+        android:adjustViewBounds="true" 
+        android:scaleType="centerCrop" />
+    
+    <ImageView
+        android:id="@+id/ivAvatarFrame"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginRight="10dp"
+        android:adjustViewBounds="true" 
+        android:scaleType="centerCrop"
+        android:src="@drawable/avatarframe" />
+    
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="aa"
+        android:textSize="16dp"
+        android:layout_toRightOf="@+id/ivThumb" >
+    </TextView>
+    
+   <TextView
+        android:id="@+id/preview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="aa"
+        android:textSize="14dp"
+        android:textColor="@color/dimgrey3"
+        android:layout_toRightOf="@+id/ivThumb"
+        android:layout_below="@+id/name" >
+    </TextView>
+    
+   <ImageView
+		android:layout_width="10dp"
+		android:layout_height="14dp"
+		android:layout_alignParentRight="true"
+		android:layout_centerVertical="true"
+		android:layout_marginRight="10dp"
+		android:adjustViewBounds="true" 
+		android:scaleType="centerCrop"
+		android:src="@drawable/list_pointer" />
+   
+</RelativeLayout>

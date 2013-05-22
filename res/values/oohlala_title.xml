@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<style name="OohlalaTitleBackground">
+		<item name="android:background">#323331</item>
+		<item name="android:colorBackground">@android:color/background_light</item>
+	</style>
+	<style name="OohlalaTheme" parent="android:Theme.Light">
+		<item name="android:windowTitleSize">45dp</item>
+		<item name="android:windowTitleBackgroundStyle">@style/OohlalaTitleBackground</item>
+	</style>
+	<style name="OohlalaNoTitle" parent="android:Theme.Light">
+		<item name="android:windowTitleSize">0dp</item>
+		<item name="android:windowTitleBackgroundStyle">@style/OohlalaTitleBackground</item>
+	</style>
+</resources>

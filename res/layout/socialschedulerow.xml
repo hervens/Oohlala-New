@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:id="@+id/bg" >  
+	    
+    <TextView
+        android:id="@+id/tvDate"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+	  	android:text=""
+	 	android:textSize="13dp"
+	  	android:paddingTop="5dp"
+	  	android:paddingBottom="5dp"
+	  	android:paddingLeft="10dp"
+	  	android:background="@color/brown1"
+	  	android:textColor="@color/black" />
+	    
+    <ImageView
+        android:id="@+id/ivBg"
+        android:layout_width="fill_parent"
+        android:layout_height="60dp"
+        android:adjustViewBounds="true" 
+        android:scaleType="centerCrop"
+        android:background="@drawable/schedule_row"
+        android:layout_below="@+id/tvDate" />
+    
+    <ImageView
+        android:id="@+id/ivLeft"
+		android:layout_width="10dp"
+		android:layout_height="60dp"
+		android:adjustViewBounds="true" 
+		android:scaleType="centerCrop"
+		android:layout_below="@+id/tvDate" />
+    
+    <ImageView
+        android:id="@+id/ivClock"
+		android:layout_width="10dp"
+		android:layout_height="10dp"
+		android:layout_marginLeft="10dp"
+		android:layout_marginTop="25dp"
+		android:adjustViewBounds="true" 
+		android:scaleType="centerCrop"
+		android:layout_toRightOf="@+id/ivLeft"
+		android:layout_below="@+id/tvDate" />
+    
+    <TextView
+        android:id="@+id/tvStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="09:00 AM"
+        android:textSize="14dp"
+        android:textColor="@color/black1"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="15dp"
+        android:layout_toRightOf="@+id/ivClock"
+        android:layout_below="@+id/tvDate" />
+    
+    <TextView
+        android:id="@+id/tvStop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="09:00 AM"
+        android:textSize="14dp"
+        android:textColor="@color/black1"
+        android:layout_marginLeft="20dp"
+        android:layout_below="@+id/tvStart"
+        android:layout_toRightOf="@+id/ivClock" />
+    
+    <ImageView
+        android:id="@+id/ivIcon"
+		android:layout_width="40dp"
+		android:layout_height="40dp"
+		android:layout_marginLeft="25dp"
+		android:layout_marginTop="10dp"
+		android:adjustViewBounds="true" 
+		android:scaleType="centerCrop"
+		android:layout_toRightOf="@+id/tvStart"
+		android:layout_below="@+id/tvDate" />
+    
+    <ImageView
+        android:id="@+id/ivIconCircle"
+		android:layout_width="40dp"
+		android:layout_height="40dp"
+		android:layout_marginLeft="25dp"
+		android:layout_marginTop="10dp"
+		android:adjustViewBounds="true" 
+		android:scaleType="centerCrop"
+		android:layout_toRightOf="@+id/tvStart"
+		android:layout_below="@+id/tvDate" />
+    
+    <TextView
+        android:id="@+id/tvName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Name"
+        android:textSize="18dp"
+        android:textColor="@color/black1"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="25dp"
+        android:layout_toRightOf="@+id/ivIcon"
+        android:maxLines="2"
+        android:layout_below="@+id/tvDate" />
+    
+    <ImageView
+		android:layout_width="10dp"
+		android:layout_height="14dp"
+		android:layout_alignParentRight="true"
+		android:layout_marginRight="10dp"
+		android:layout_marginTop="23dp"
+		android:adjustViewBounds="true" 
+		android:scaleType="centerCrop"
+		android:src="@drawable/list_pointer"
+		android:layout_below="@+id/tvDate"
+		android:visibility="gone" />
+       
+</RelativeLayout>

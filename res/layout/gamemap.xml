@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+    
+    <RelativeLayout
+		        xmlns:android="http://schemas.android.com/apk/res/android"
+		        android:layout_width="fill_parent"
+		        android:layout_height="50dp"
+		        android:orientation="horizontal"
+		        android:background="@drawable/header_slice"
+		        android:id="@+id/rlHeader"
+		        android:paddingTop="5dp"
+		        android:paddingLeft="5dp"
+		        android:paddingRight="5dp"
+		        android:paddingBottom="5dp" >
+		       
+				<TextView  
+				    android:id="@+id/header"
+					android:layout_width="200dp" 
+					android:layout_height="35dp"
+					android:text=""
+					android:textColor="@color/white1"
+					android:textSize="16dp"
+					android:maxLines="1"
+					android:layout_centerInParent="true"
+					android:gravity="center" />
+				
+				<Button
+			        android:layout_width="54dp"
+			        android:layout_height="35dp"
+			        android:background="@drawable/button_back"
+			        android:id="@+id/back"
+			        android:layout_marginTop="2dp"
+			        android:layout_alignParentLeft="true" />
+				
+				<Button
+			        android:layout_width="54dp"
+			        android:layout_height="38dp"
+			        android:background="@drawable/compose_share_button_bg"
+			        android:id="@+id/bGameRule"
+			        android:text="@string/Rules"
+		 			android:textSize="13dp"
+		 			android:textColor="@color/dimgrey3"
+					android:gravity="center"
+			        android:layout_marginTop="0dp"
+			        android:layout_alignParentRight="true" />
+
+			</RelativeLayout>	
+
+		<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+		    android:layout_width="fill_parent"
+		    android:layout_height="fill_parent"
+		    android:orientation="vertical"
+		    android:id="@+id/RLGameMap"
+		    android:layout_below="@+id/rlHeader" >
+			
+		    <com.google.android.maps.MapView
+		        android:id="@+id/mvGameMap"
+		        android:layout_width="fill_parent"
+		        android:layout_height="fill_parent"
+		        android:apiKey="@string/apikey"
+		        android:clickable="true"
+		        android:enabled="true" />
+		    
+		    <TextView
+		        android:id="@+id/tvPriceDistance"
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        android:gravity="center"
+		        android:text="@string/loading"
+		        android:layout_alignParentTop="true"
+		        android:background="@drawable/textviewtransparent"
+        		android:textColor="@color/white1"
+        		android:paddingTop="5dp"
+        		android:paddingBottom="5dp" />
+		    
+		    <TextView
+		        android:id="@+id/tvTimeUntilEnd"
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        android:gravity="center"
+		        android:text="@string/loading"
+		        android:layout_alignParentBottom="true"
+		        android:background="@drawable/textviewtransparent"
+        		android:textColor="@color/white1"
+        		android:paddingTop="5dp"
+        		android:paddingBottom="5dp" />
+		
+		</RelativeLayout>
+		
+</RelativeLayout>

@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:background="@color/white1" >
+    
+	    	<RelativeLayout
+			        xmlns:android="http://schemas.android.com/apk/res/android"
+			        android:layout_width="fill_parent"
+			        android:layout_height="50dp"
+			        android:orientation="horizontal"
+			        android:background="@drawable/header_slice"
+			        android:id="@+id/rlHeader"
+			        android:paddingTop="5dp"
+			        android:paddingLeft="5dp"
+			        android:paddingRight="5dp"
+			        android:paddingBottom="5dp" >
+		       
+				<TextView  
+				    android:id="@+id/header"
+					android:layout_width="200dp" 
+					android:layout_height="35dp"
+					android:text="@string/SCHEDULE"
+					android:textColor="@color/white1"
+					android:textSize="16dp"
+					android:layout_centerInParent="true"
+					android:gravity="center"
+					android:shadowRadius="1"
+  					android:shadowDx="0"
+  					android:shadowDy="-2"
+  					android:shadowColor="@color/shadow_color" />
+				
+				<com.gotoohlala.TopMenuNavbar  
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:id="@+id/bTopMenuNavBar"
+			        android:layout_marginTop="2dp"
+			        android:layout_alignParentLeft="true" />
+				
+				<Button
+			        android:layout_width="50dp"
+			        android:layout_height="36dp"
+			        android:background="@drawable/button_add"
+			        android:id="@+id/bAdd"
+			        android:layout_marginTop="3dp"
+			        android:layout_alignParentRight="true" />
+				
+			</RelativeLayout>
+			
+	    	<com.handmark.pulltorefresh.library.PullToRefreshListView
+	    		android:layout_width="fill_parent"
+	   			android:layout_height="fill_parent"
+	    		android:id="@+id/lvSocialschedule"
+				android:fadingEdge="none"
+				android:scrollbarThumbVertical="@drawable/scrollbar_vertical_thumb"
+				android:scrollbars="none"
+				android:layout_below="@+id/llCalendar"
+				android:layout_marginTop="-2dp" />
+			
+    <LinearLayout
+        android:id="@+id/llCalendar"
+		android:orientation="vertical"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_below="@+id/rlHeader"
+		android:background="@color/black1" >
+
+	<RelativeLayout
+		xmlns:android="http://schemas.android.com/apk/res/android"
+		android:orientation="horizontal"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:padding="5dp" >
+		
+	    <Button
+			android:id="@+id/bToday"
+			android:background="@drawable/today_button"
+			android:layout_width="78dp"
+			android:layout_height="40dp"
+			android:text="@string/Today"
+			android:textSize="15dp"
+			android:textColor="@color/white1"
+			android:layout_centerVertical="true"
+			android:paddingBottom="3dp" />
+		
+		<Button
+			android:id="@+id/currentMonth"
+			android:textColor="@color/white1"
+			android:background="@drawable/button_date"
+			android:layout_width="160dp"
+			android:layout_height="40dp"
+			android:gravity="center"
+			android:layout_centerInParent="true"
+			android:text=""
+			android:textSize="16dp" />
+		
+		<ImageView
+			android:id="@+id/prevMonth"
+			android:src="@drawable/button_prev_day"
+			android:layout_width="25dp"
+			android:layout_height="25dp"
+			android:layout_marginLeft="100dp"
+			android:layout_centerVertical="true" />
+		
+		<ImageView
+			android:id="@+id/nextMonth"
+			android:src="@drawable/button_next_day"
+			android:layout_width="25dp"
+			android:layout_height="25dp"
+			android:layout_marginRight="100dp"
+			android:layout_alignParentRight="true"
+			android:layout_centerVertical="true" />
+		
+		<Button
+		    android:id="@+id/bToggleDay"
+		    android:layout_width="40dp"
+			android:layout_height="40dp"
+			android:layout_marginRight="40dp"
+			android:layout_alignParentRight="true"
+			android:layout_centerVertical="true"
+			android:background="@color/realtransparent" />
+		
+		<Button
+		    android:id="@+id/bToggleMonth"
+		    android:layout_width="40dp"
+			android:layout_height="40dp"
+			android:layout_alignParentRight="true"
+			android:layout_centerVertical="true"
+			android:background="@color/realtransparent" />
+		
+		<ImageView
+			android:id="@+id/ivToggle"
+			android:src="@drawable/button_day_toggle"
+			android:layout_width="80dp"
+			android:layout_height="40dp"
+			android:layout_alignParentRight="true"
+			android:layout_centerVertical="true" />
+		
+		<TextView
+		    android:id="@+id/tvDate"
+		    android:layout_width="40dp"
+			android:layout_height="40dp"
+			android:layout_marginRight="40dp"
+			android:layout_alignParentRight="true"
+			android:layout_centerInParent="true"
+			android:background="@color/realtransparent"
+			android:gravity="center"
+			android:text="1"
+			android:textColor="@color/white1"
+			android:textSize="9dp"
+			android:paddingLeft="4dp"
+			android:paddingBottom="3dp" />
+		
+	</RelativeLayout>
+
+	<LinearLayout
+		android:layout_gravity="center"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginRight="10dp"
+		android:layout_marginLeft="5dp"
+		android:id="@+id/llWeekDay"
+		android:visibility="gone" >
+		
+		<TextView
+			android:layout_width="32dp"
+			android:layout_height="wrap_content"
+			android:text="@string/Sun"
+			android:layout_weight="1"
+			android:gravity="center"
+			android:textColor="@color/white1"
+			android:textSize="14dp" />
+		<TextView
+			android:layout_width="32dp"
+			android:layout_height="wrap_content"
+			android:text="@string/Mon"
+			android:layout_weight="1"
+			android:gravity="center"
+			android:textColor="@color/white1"
+			android:textSize="14dp" />
+		<TextView
+			android:layout_width="32dp"
+			android:layout_height="wrap_content"
+			android:text="@string/Tue"
+			android:layout_weight="1"
+			android:gravity="center"
+			android:textColor="@color/white1"
+			android:textSize="14dp" />
+		<TextView
+			android:layout_width="32dp"
+			android:layout_height="wrap_content"
+			android:text="@string/Wed"
+			android:layout_weight="1"
+			android:gravity="center"
+			android:textColor="@color/white1"
+			android:textSize="14dp" />
+		<TextView
+			android:layout_width="32dp"
+			android:layout_height="wrap_content"
+			android:text="@string/Thu"
+			android:layout_weight="1"
+			android:gravity="center"
+			android:textColor="@color/white1"
+			android:textSize="14dp" />
+		<TextView
+			android:layout_width="32dp"
+			android:layout_height="wrap_content"
+			android:text="@string/Fri"
+			android:layout_weight="1"
+			android:gravity="center"
+			android:textColor="@color/white1"
+			android:textSize="14dp" />
+		<TextView
+			android:layout_width="32dp"
+			android:layout_height="wrap_content"
+			android:text="@string/Sat"
+			android:layout_weight="1"
+			android:gravity="center"
+			android:textColor="@color/white1"
+			android:textSize="14dp" />
+		
+	</LinearLayout>
+
+	<GridView
+		android:id="@+id/calendar"
+		android:numColumns="7"
+		android:listSelector="@color/realtransparent"
+		android:paddingLeft="10dp"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:visibility="gone" >
+	</GridView>
+
+	</LinearLayout>
+			
+    		<RelativeLayout
+		        xmlns:android="http://schemas.android.com/apk/res/android"
+		        android:layout_width="fill_parent"
+		        android:layout_height="fill_parent"
+		        android:paddingLeft="30dp"
+		        android:id="@+id/rlInAppTour"
+		        android:layout_below="@+id/rlHeader"
+		        android:background="@color/transparent"
+		        android:visibility="gone" >
+		       
+				<TextView  
+				    android:id="@+id/tvTourLine1"
+					android:layout_width="wrap_content" 
+					android:layout_height="wrap_content"
+					android:text="@string/Social_Schedule"
+					android:textColor="@color/white1"
+					android:textSize="24dp"
+					android:layout_marginTop="40dp" />
+
+				<TextView  
+				    android:id="@+id/tvTourLine2"
+					android:layout_width="wrap_content" 
+					android:layout_height="wrap_content"
+					android:text="@string/socialtour1"
+					android:textColor="@color/white1"
+					android:textSize="18dp"
+					android:layout_marginTop="30dp"
+  					android:layout_below="@+id/tvTourLine1" />
+			
+			</RelativeLayout>
+
+</RelativeLayout>

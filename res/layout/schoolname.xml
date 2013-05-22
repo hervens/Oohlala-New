@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical" android:layout_width="fill_parent"
+	android:layout_height="fill_parent" >
+
+	<View android:id="@+id/mid" android:layout_centerInParent="true"
+		android:layout_width="1dp" android:layout_height="0dp" />
+	<LinearLayout android:id="@+id/title" android:clickable="true"
+		android:layout_width="fill_parent" android:layout_height="fill_parent"
+		android:layout_above="@id/mid" android:background="@drawable/bg_launch"
+		android:gravity="bottom|center_horizontal">
+		<View android:layout_width="200dp" android:layout_height="39dp"
+			android:layout_marginBottom="10dp" android:background="@drawable/logo" />
+	</LinearLayout>
+
+	<RelativeLayout android:layout_width="fill_parent"
+		android:layout_height="fill_parent" android:background="@drawable/bg_launch"
+		android:layout_below="@id/mid">
+		<TextView
+	        android:id="@+id/tvSchoolName"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text=""
+	        android:textColor="@color/white1"
+	        android:textSize="15dp"
+	        android:layout_centerHorizontal="true"
+	        android:layout_marginTop="10dp"
+	        android:shadowRadius="1"
+  			android:shadowDx="0"
+  			android:shadowDy="-2"
+  			android:shadowColor="@color/shadow_color" />
+		
+		<com.facebook.widget.LoginButton
+		    android:id="@+id/bLoginFacebook" 
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content" 
+			android:layout_centerHorizontal="true" 
+			android:layout_below="@+id/tvSchoolName"
+			android:layout_margin="8dp" />
+		
+		<TextView
+		    android:id="@+id/tvOr"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="Or"
+	        android:textColor="@color/white1"
+	        android:textSize="15dp"
+	        android:layout_centerHorizontal="true"
+	        android:layout_below="@+id/bLoginFacebook"
+	        android:shadowRadius="1"
+  			android:shadowDx="0"
+  			android:shadowDy="-2"
+  			android:shadowColor="@color/shadow_color" />
+		
+		<Button android:id="@+id/bRegister" android:layout_width="wrap_content"
+			android:layout_below="@+id/tvOr" android:layout_centerHorizontal="true"
+			android:layout_height="wrap_content" android:text="@string/register"
+			android:textColor="#eee"  android:textStyle="bold"
+			android:textSize="16dp"
+			android:background="@drawable/btn_redeem_item_state"
+			android:paddingTop="0dp"
+			android:paddingBottom="0dp"
+			android:paddingLeft="30dp"
+			android:paddingRight="30dp"
+			android:layout_margin="8dp"
+			android:shadowRadius="1"
+  			android:shadowDx="0"
+  			android:shadowDy="-2"
+  			android:shadowColor="@color/shadow_color" />
+	</RelativeLayout>
+
+</RelativeLayout>

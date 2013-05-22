@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:paddingLeft="10dp"
+	    android:paddingTop="10dp"
+	    android:paddingRight="10dp"
+	    android:paddingBottom="10dp"
+	    android:id="@+id/bg"
+	    android:background="@drawable/listview_row_bg_state" >  
+    
+    <ImageView
+        android:id="@+id/ivThumb"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginRight="10dp"
+        android:adjustViewBounds="true" 
+        android:scaleType="centerCrop"
+        android:padding="5dp"
+        android:background="@drawable/profile_pic_bg2" >
+    </ImageView>
+    
+    <TextView
+        android:id="@+id/tvFirstname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="aa"
+        android:textSize="16dp"
+        android:textColor="@color/blue0"
+        android:layout_toRightOf="@+id/ivThumb" >
+    </TextView>
+    
+    <TextView
+        android:id="@+id/tvLookingFor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="aa"
+        android:textColor="@color/black"
+        android:textSize="13dp"
+        android:layout_toRightOf="@+id/ivThumb"
+        android:layout_below="@+id/tvFirstname" >
+    </TextView>
+    
+    <TextView
+        android:id="@+id/tvLocationName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="aa"
+        android:textColor="@color/black"
+        android:textSize="13dp"
+        android:layout_toRightOf="@+id/ivThumb"
+        android:layout_below="@+id/tvLookingFor" >
+    </TextView>
+    
+    <TextView
+        android:id="@+id/tvSchoolName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="aa"
+        android:textColor="@color/black"
+        android:textSize="13dp"
+        android:layout_toRightOf="@+id/ivThumb"
+        android:layout_below="@+id/tvLocationName" >
+    </TextView>
+   
+    <Button
+        android:id="@+id/bVote"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/vote"
+        android:textColor="@color/white1"
+        android:textSize="13dp"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/buttonlike"
+        android:layout_below="@+id/tvLocationName" />
+     
+    <ProgressBar
+        android:id="@+id/pbLoading"
+        style="?android:attr/progressBarStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+    
+    <ImageView
+			        android:layout_width="10dp"
+			        android:layout_height="14dp"
+			        android:layout_alignParentRight="true"
+			        android:layout_centerVertical="true"
+			        android:layout_marginRight="10dp"
+			        android:adjustViewBounds="true" 
+			        android:scaleType="centerCrop"
+			        android:src="@drawable/list_pointer" />
+    
+</RelativeLayout>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/brown2" >
+    
+    <TextView
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+	  	android:text="@string/Invite_Friends"
+	 	android:textSize="13dp"
+	  	android:padding="5dp"
+	  	android:background="@drawable/textview"
+	  	android:textColor="@color/white1"
+	  	android:id="@+id/tvSMSInvite"
+	  	android:gravity="center" />
+
+    <ListView
+        android:id="@+id/lvSMSInvite"
+	   	android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:fadingEdge="none"
+		android:scrollbarThumbVertical="@drawable/scrollbar_vertical_thumb"
+		android:layout_below="@+id/tvSMSInvite" />
+    
+</RelativeLayout>

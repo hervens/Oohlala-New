@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_rewardsvenuesstoresreport"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:padding="10dp" >
+    
+    <EditText
+        android:id="@+id/etReportProblem"
+        android:layout_width="fill_parent"
+        android:layout_height="100dp"
+        android:inputType="textMultiLine" />
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:layout_marginTop="5dp" >
+
+        <Button
+            android:id="@+id/bCancel"
+            android:layout_width="90dp"
+		    android:layout_height="42dp"
+		    android:text="@string/Cancel"
+		    android:textColor="@color/white1"
+		    android:textSize="18dp"
+		    android:background="@drawable/button2" />
+
+        <Button
+            android:id="@+id/bSend"
+            android:layout_width="90dp"
+		    android:layout_height="42dp"
+		    android:textColor="@color/white1"
+		    android:textSize="18dp"
+		    android:background="@drawable/button3"
+		    android:layout_marginLeft="10dp"
+            android:text="@string/Send" />
+    </LinearLayout>
+
+</LinearLayout>
